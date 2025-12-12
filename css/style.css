@@ -1,7 +1,11 @@
 body {
-  background: #f8f8f8;
+  background: #ffffff;
 }
 
 footer {
   font-size: 0.9rem;
+}
+
+.dropdown-menu {
+	background : #E0E0E0;
 }
