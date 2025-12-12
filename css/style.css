@@ -1,19 +1,5 @@
 body {
-  background: #f7f7f7;
-}
-
-.hero {
-  background: #e9ecef;
-  border-bottom: 1px solid #ccc;
-}
-
-.navbar-brand {
-  /*font-weight: 600;*/
-}
-
-.nav-item {
-  background: #8090A0;
-  margin-left: 1px;
+  background: #f8f8f8;
 }
 
 footer {

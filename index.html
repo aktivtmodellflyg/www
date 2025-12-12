@@ -13,7 +13,7 @@
 <body>
 
   <!-- Navigationsfält -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fs-4">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
     <div class="container">
       <a class="navbar-brand" href="index.html"><img src="image/amf_114x114.png" alt="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -22,12 +22,65 @@
 
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="mfd.html">Modellflygets dag</a></li>
-          <li class="nav-item"><a class="nav-link" href="mf/mf.html">Vad är modellflyg</a></li>
-          <li class="nav-item"><a class="nav-link" href="borja/borja.html">Börja</a></li>
-   		  <li class="nav-item"><a class="nav-link" href="utb/utb.html">Utbildning</a></li>
-   		  <li class="nav-item"><a class="nav-link" href="download/download.html">Ladda ned</a></li>
-   		  <li class="nav-item"><a class="nav-link" href="update/update.html">Uppdatera</a></li>
+		  
+          <li class="nav-item"><a class="nav-link" href="mfd/mfd.html">
+		  Modellflygets dag
+		  </a></li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modellflyg
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="mf/mf.html">Detta är modellflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="mf/unga.html">Unga</a>
+            <a class="dropdown-item" href="mf/avancera.html">Avancera</a>
+            <a class="dropdown-item" href="mf/regler.html">Regler</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Börja
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="borja/borja.html">Intro</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="borja/radio.html">Radio</a>
+            <a class="dropdown-item" href="borja/laddare.html">Laddare</a>
+            <a class="dropdown-item" href="borja/modell_wing.html">Flygplan</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Utbildning
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="utb/utb.html">Intro</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="utb/basic_plane.html">Uppbyggad RC-Plan</a>
+          </div>
+          </li>
+
+   		  <li class="nav-item"><a class="nav-link" href="download/download.html">
+		  Ladda ned
+		  </a></li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Uppdatera
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="update/update.html">Intro</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="update/spektrum.html">Spektrum</a>
+            <a class="dropdown-item" href="update/radiomaster.html">Radiomaster EdgeTX ELRS MM</a>
+          </div>
+          </li>
+
+
         </ul>
       </div>
     </div>
@@ -36,7 +89,7 @@
   <!-- Huvudinnehåll -->
   <header class="hero bg-light py-5 mb-4">
     <div class="container text-left">
-      <h1 class="display-5 fw-bold">Aktivt modellflyg</h1>
+      <h1 class="display-8 fw-bold">Aktivt modellflyg</h1>
       <p class="lead">
 	  Syftet med Aktivt Modellflyg är att samla, förklara och visa vad modellflyg egentligen är – samt att erbjuda material och information som hjälper både privatpersoner och klubbar att välkomna nya människor in i vår trevliga hobby. Allt material får användas fritt så länge det sker i icke-kommersiellt syfte.
       <br><br>
