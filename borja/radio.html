@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Meny -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fs-4">
+    <div class="container">
+      <a class="navbar-brand"><img src="../image/amf_114x114.png" alt="logo"></a>
+      <a class="navbar-brand" href="../index.html">/Hem</a>
+      <a class="navbar-brand" href="borja.html">/Börja</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="radio.html"><b>Radio</b></a></li>
+        <li class="nav-item"><a class="nav-link" href="laddare.html">Laddare</a></li>
+        <li class="nav-item"><a class="nav-link" href="modell_wing.html">Flygplan</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Innehåll -->
+  <main class="container py-4">
+    <h1>Radiosystem - Sändare och mottagare</h1>
+	Den bästa rekommentationen är att prata med personerna i din klubb och välja något de använder så du kan få hjälp. Tänk igenom noga, för radion används till flera modeller och mottagare, kan bli dyrt att byta senare.
+	Informationen nedan får ses som allmän information.
+	
+	<h3>De vanligaste radiosystemen, hur de är uppbyggda</h3>
+	
+    <table class="table table-striped table-bordered w-75">
+      <thead class="table-dark">
+        <tr>
+          <th>System / märke / filosofi</th>
+          <th>Vad det innebär / kännetecken</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>”Stängda / proprietära” system — t.ex. Spektrum, Futaba, Jeti m.fl.</td>
+          <td>Tillverkaren kontrollerar protokoll + kompatibilitet — sändare + mottagare från samma ”familj” behövs.</td>
+        </tr>
+        <tr>
+          <td>”Öppna / modulära” system baserade på firmware — t.ex. sändare med OpenTX eller EdgeTX, t.ex. från FrSky, RadioMaster, etc.</td>
+          <td>Du får stora möjligheter till anpassning, multi-protokoll och kan använda sändaren till många olika typer av modeller.</td>
+        </tr>
+        <tr>
+          <td>"Produkter" inga system - t.ex. DJI</td>
+          <td>DJI är stora och har fina quad's, men dessa är inte ubbygda med samma systemtänk. En sändare behöver inte alls fungera med andra modeller inom DJI. Rökna med att du måste köpa om mycket när du köper nästa modell.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Köper du sändaren utanför sverige så kontrollera att den är en "mode 2" så spakarna får rätt funktion. Mode 2 - Vänster spak styr gas och sidroder med höger spak styr höjd och skev.</p>
+    <p>Köper du sändaren utanför EU måste du kolla att den får användas i EU. Sändare anpassade för EU kan ha andra sändningseffekter, arbete med andra frekvenser samt andra radioprotokoll.</p>
+	
+	<h4>För- och nackdelar med stängda/proprietära system</h4>
+	Styrkor
+	<ul>
+	<li>Stabilitet & pålitlighet: System som Spektrum och Futaba har varit länge och är väl testade. DSMX (Spektrum) och FASST/FASSTest (Futaba) är beprövade protokoll med låg risk för störningar.</li>
+	<li>Enkelhet och “plug-and-play”: Du behöver inte bry dig om firmware, moduler eller kompatibilitet mellan tredje-parts-mottagare — köper du paketet så fungerar det oftast direkt.</li>
+	<li>Stark support, reservdelar och märke-ekosystem: Originaltillverkare säljer reservdelar, support och kompatibla mottagare — bra om du värdesätter lång livslängd och service.</li>
+	</ul>
+	Svagheter
+	<ul>
+	<li>Dyrare: Sändare och mottagare brukar kosta mer än motsvarande öppna system.</li>
+	<li>Låst till ett ekosystem: Du kan inte blanda fritt mellan olika tillverkares mottagare, och det finns mindre flexibilitet om du bygger många olika typer av modeller.</li>
+	<li>Mindre anpassningsbart: Funktionen är ofta fast — du har mindre möjlighet att lägga till egna mixar, script, telemetri-modifikationer etc.</li>
+	</ul>
+
+	<h4>För- och nackdelar med öppna/modulära system (OpenTX/EdgeTX)</h4>
+	Styrkor
+	<ul>
+	<li>Flexibilitet / multi-protokoll: Du kan använda samma radio till t.ex. FrSky, TBS/ExpressLRS, FlySky, DSMX med mera — mycket smidigt om du har olika typer av modeller.</li>
+	<li>Kostnadseffektivt: Ofta billigare än premium-sändare, men med möjlighet till nästan lika många funktioner.</li>
+	<li>Anpassning & avancerade funktioner: OpenTX/EdgeTX tillåter egna mixar, avancerad telemetri, specialfunktioner, röstalarmer, custom-script med mera — idealiskt om du gillar att tweaka.</li>
+	<li>Bra för byggare och hobbyister med flera modeller: Om du bygger olika slags plan, drönare, helikoptrar etc — då är ett öppet system ofta mest praktiskt.</li>
+	</ul>
+	Svagheter
+	<ul>
+	<li>Lite större komplexitet i setup: Kräver att du sätter dig in i menyer, firmware, bind-/protocol-val. Inte alltid ”plug-and-play”.</li>
+	<li>Bygger på modul-/mottagarkompatibilitet: Du måste kontrollera att mottagare stöder protokoll du valt.</li>
+	<li>Byggkvalitet varierar: Billigare modeller kan ha enklare gimbaler/knappar, vilket påverkar precision och livslängd — även om funktionaliteten är stor.</li>
+	</ul>
+
+	<h3>Vilket system passar vad — beroende på användare</h3>
+    <table class="table table-striped table-bordered w-75">
+      <thead class="table-dark">
+        <tr>
+          <th>Typ av användare / behov</th>
+          <th>Rekommenderat system</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nybörjare, vill ha enkel setup & trygghet</td>
+          <td>Spektrum, Futaba — färre val, mer ”säkert”</td>
+        </tr>
+        <tr>
+          <td>Har många olika modeller / bygger själv / gillar att tweak’a</td>
+          <td>OpenTX / EdgeTX med FrSky / RadioMaster / liknande</td>
+        </tr>
+        <tr>
+          <td>Tävling, helikoptrar, jets eller mycket precision</td>
+          <td>High-end Futaba, Jeti, eller välbyggd EdgeTX-sändare</td>
+        </tr>
+        <tr>
+          <td>FPV, multirotor, drönare, många små projekt</td>
+          <td>Modular EdgeTX + multi-protokoll + små mottagare</td>
+        </tr>
+      </tbody>
+    </table>
+
+	<h3>Några sändare och kommentarer</h3>
+	<ul>
+	<li><b>Spektrum NX8/NX8</b>+ DSMX 20-ch – Stabil och relativt modern radio i ett stängt ekosystem. Bra om du redan har eller planerar att hålla dig inom Spektrums mottagare – t.ex. för enkelhet och kompatibilitet. Det finns många BNF modeller (flygplan) för spektrum.</li>
+	<li><b>Futaba 14SG</b> 14-ch FASSTest – Premium-radio med mycket hög kvalitet och tillförlitlighet. Bra för komplexa modeller, helikoptrar eller tävling, med många kanaler, bra respons och gediget byggd. Stängd/proprietär modell — fungerar bäst om du håller dig i Futabas ekosystem.</li>
+	<li><b>RadioMaster TX16S MKII ELRS</b> 16-ch– Mycket modern och mångsidig radio. Har 16 kanaler, stöd för flera protokoll (multi-protokoll / ELRS / modulbaserat), touchscreen, bra ergonomi och flexibilitet. Perfekt om du bygger eget, varierar mellan flygtyper eller vill ha lång hållbarhet. Det finns många BNF modeller (quad) för ELSR.</li>
+	<li><b>RadioMaster TX16S MKII 4-in-1</b> Multi-protokoll – Mycket prisvärd multimoduls-radio som fungerar med många olika mottagartyper – perfekt för dig med flera olika modeller och märken. Ger flexibilitet, men kräver ibland en del konfigurering.</li>
+	<li><b>Jeti Duplex DS-24 II</b> – High-end “pro-radio”. Extrem kvalitet, mycket programmerings-möjligheter, robust konstruktion. Passar dig som vill ha absolut topp-klass och planerar tävling eller stora scale-modeller. Prisnivån är därefter.</li>
+	</ul>
+
+  </main>
+
+  <footer class="bg-secondary text-white text-center py-3 mt-4">
+    <b>Arbetet pågår</b> - Aktivt Modellflyg - Vi skall ha kul tillsammans - En aktiv hobby i luften under RCFF, SMFF eller dönarkortsregler
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
