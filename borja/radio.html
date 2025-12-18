@@ -58,6 +58,7 @@
             <a class="dropdown-item" href="../utb/utb.html">Intro</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
+			<a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
           </div>
           </li>
 
@@ -173,16 +174,14 @@
       </tbody>
     </table>
 
-	<h3>Några sändare och kommentarer</h3>
-	<ul>
-	<li><b>Futaba 14SG</b> 14-ch FASSTest – Premium-radio med mycket hög kvalitet och tillförlitlighet. Bra för komplexa modeller, helikoptrar eller tävling, med många kanaler, bra respons och gediget byggd. Stängd/proprietär modell — fungerar bäst om du håller dig i Futabas ekosystem.</li>
-	<li><b>RadioMaster TX16S MKII ELRS</b> 16-ch– Mycket modern och mångsidig radio. Har 16 kanaler, stöd för flera protokoll (multi-protokoll / ELRS / modulbaserat), touchscreen, bra ergonomi och flexibilitet. Perfekt om du bygger eget, varierar mellan flygtyper eller vill ha lång hållbarhet. Det finns många BNF modeller (quad) för ELSR.</li>
-	<li><b>RadioMaster TX16S MKII 4-in-1</b> Multi-protokoll – Mycket prisvärd multimoduls-radio som fungerar med många olika mottagartyper – perfekt för dig med flera olika modeller och märken. Ger flexibilitet, men kräver ibland en del konfigurering.</li>
-	<li><b>Jeti Duplex DS-24 II</b> – High-end “pro-radio”. Extrem kvalitet, mycket programmerings-möjligheter, robust konstruktion. Passar dig som vill ha absolut topp-klass och planerar tävling eller stora skalamodeller. Kan ha två radiolänkar till modellen på två olika frekvensband. Prisnivån är därefter.</li>
-	</ul>
-
-    <h4>Spektrums sändarmodeller (Som det sett ut under 2025)</h4>
+    <h4>Lite om Spektrums sändarmodeller (Som det sett ut under 2025)</h4>
+	<p>
 	Stabil och relativt modern radio i ett stängt ekosystem. Bra om du redan har eller planerar att hålla dig inom Spektrums mottagare – t.ex. för enkelhet och kompatibilitet. Det finns många BNF modeller (flygplan) för spektrum.
+	Alla Spektrums sändare använder radioprotokollet <b>DSMX</b> och mjukvaran heter <b>Airwave</b>, oavsett prisklass.
+    Det äldre protokollet DSM2 används inte längre i EU, och en DSMX-sändare kan därför inte styra en gammal DSM2-mottagare.
+	</p>
+	<p>
+    Några kommenterar till de olika modellerna. 
 	<ul>
 	<li><b>Prisvärda och moderna</b> - Mest prisvärda nya modellen är NX8/NX8+, en något bättre variant men tyvärr betydligt dyrare NX10/NX10+</li>
 	<li><b>Enklare</b> - Modeller som slutar på "e" är nedbantad varianter med mer begränsningar i mjukvara, enklare komponenter mm. De har inte tal som ge varningar och information med röst. Man kan få pipljud och se information på skärmen. Några saknar laddningsbara batteri. Några har bara en antenn. (Vissa är faktiskt inte billigare än en NX8 efter man köpt till lite saker som saknas). Exempel på "e" modeller DX8e, NX7e</li>
@@ -190,15 +189,46 @@
 	<li><b>Enbart begagnade - Föregångarna till NX modellerna</b> - Äldre modeller som fortfarande är aktuella med uppdaterad mjukvara. Exempel DX9 Back edition, DX9, DX8-G2, DX6-G3.</li>
 	<li><b>Enbart Begagnade - Äldre</b> - Äldre modeller som saknar "forward programming" fungerar att börja med, men man kommer inte inställningar i nya mottagare/gyro. Exempel DX8, DX6-G2.</li>
     </ul>
+	</p>
 	
-    <h4>Mer om Futabas sändarmodeller</h4>
+    <h4>Lite om Futabas sändarmodeller</h4>
     <p class="amf">Vill du bidra, kontakta mig ? <a href="../index.html">Kontakt</a></p>
+	<p>
+    Futaba använder flera olika radioprotokoll. Det är därför viktigt att välja en mottagare som passar just din sändare. Mer avancerade sändare, till exempel 16IZ, stödjer flera protokoll.
+    </p>
+	<p>
+    Några kommentarer om Futabas radioprotokoll
+    <ul>    
+    <li><b>FHSS</b> Äldre protokoll som inte stöds längre av moderna sändare. Antal kanaler: 4	Mottagare: E2004GF Sändare: 4YK, 6J, 8J
+    </li>
+ 	<li><b>S-FHSS (Secure Frequency Hopping Spread Spectrum)</b> Ett snabbt och pålitligt protokoll, ofta använt i mer budgetvänliga system (t.ex. 8J). Lätt att para ihop.
+	Antal kanaler: 8 Mottagare: Heter troligen R20xx eller R21xx.
+    </li>
+ 	<li><b>T-FHSS (Telemetry Frequency Hopping Spread Spectrum)</b> Ett kostnadseffektivt protokoll som erbjuder telemetri (RPM, spänning, temperatur m.m.) samt en säker länk. Används brett för olika typer av modeller.
+	Antal kanaler: 12 + 2 on/off
+	Mottagare: Heter oftast R30xx.
+    </li>
+ 	<li><b>FASST (Futaba Advanced Spread Spectrum Technology)</b> Futabas ursprungliga 2,4 GHz-protokoll. Finns i flera varianter för flyg, bland annat FASST7 (7 kanaler utan telemetri) och FASST Multi (upp till 12 kanaler).
+	Mottagare: Heter troligen R60xx, R61xx, R62xx eller R63xx.
+    </li>
+ 	<li><b>FASSTest</b> Ett avancerat protokoll med full telemetri (återkoppling av data från modellen) och hög respons. Lämpligt för flyg samt bil och båt.
+	Mottagare heter troligen R70xx eller R71xx.
+    </ul>
+	</p>
 
-    <h4>Mer om EdgeTX / OpenTX sändarmodeller</h4>
+
+    <h4>Lite om sändare som använder EdgeTX</h4>
     <p class="amf">Vill du bidra, kontakta mig ? <a href="../index.html">Kontakt</a></p>
-
+	<p>
+	Det finns många olika sändare från olika tillverkare med stöd för flera radioprotokoll. <b>ExpressLRS (ELRS)</b> protkollet är på stark frammarch. Kontrollera alltid specifikationerna innan köp.
+	Observera att vissa sändare är avsedda för quadkoptrar och saknar trimknappar, vilket normalt behövs för flygplan. Några märken som sändare som kan köra köra EdgeTX är, Radiomaster, Jumper, FlySky, FRSky, HelloRadioSky, mfl.
+    </p>
+	
     <h4>Mer om något annat radiosystem</h4>
     <p class="amf">Vill du bidra, kontakta mig ? <a href="../index.html">Kontakt</a></p>
+	
+	
+	<h4>Sammanställnig</h4>
 	
   </main>
 
