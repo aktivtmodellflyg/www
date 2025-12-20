@@ -78,7 +78,7 @@
             <a class="dropdown-item" href="../update/spektrum.html">Spektrum</a>
             <a class="dropdown-item" href="../update/futaba.html">Futaba</a>
             <a class="dropdown-item" href="../update/frsky.html">FrSky med Ethos</a>
-            <a class="dropdown-item" href="../update/radiomaster.html">EdgeTX, ELRS & MM - Radiomaster</a>
+            <a class="dropdown-item" href="../update/radiomaster.html">EdgeTX, ELRS & MM - RadioMaster</a>
           </div>
           </li>
 
@@ -90,7 +90,7 @@
 
   <!-- Innehåll -->
   <main class="container py-4">
-    <h3>Knapplayout</h3>
+    <h2>Knapplayout</h2>
 	<p>Alla sändare kan programmeras så att knappar och brytare får de funktioner du själv vill ha – det är till stor del en smaksak.
 	   Innan du bestämmer dig kan det dock vara bra att tänka igenom hur du flyger. Vänster spak är ofta lättare att släppa under flygning,
 	   vilket gör att knappar och brytare på vänster sida kan vara enklare att använda för funktioner som du använder ofta.</p>
@@ -100,7 +100,7 @@
 	<p>En stark rekommendation är däremot att samma funktion på samma knapp för alla dina modeller.
 	   Då slipper du tänka efter i luften och minskar risken för misstag.</p>
 	<p>Nedan visas ett exempel på knapplayout på en Spektrum DX9, men de flesta sändare har liknande placering av knappar och brytare. Ta tänket med dig och använd det på andra märken.
-    <br><img src="radio_setup/knapp_layout_1.png" width="800">
+    <br><img src="radio_setup/knapp_layout_1.png" width="800" alt="Knapplayout">
 	</p>
 	
 	<br>
@@ -119,8 +119,8 @@
 	<br><i>Meny -> Throttle Cut
 	<br>Kolla att fältet "01" efter "Switch H" har vit bakgrund på "0" och svart på "1". (Ändra bakgrund genom ändra knappen H till positionen som ska ändras och tryck sedan på hjulet för ändra)
 	</i>
-    <br><img src="radio_setup/spektrum/th_cut_1.bmp" width="200">
-    <img src="radio_setup/spektrum/th_cut_2.bmp" width="200">
+    <br><img src="radio_setup/spektrum/th_cut_1.bmp" width="200" alt="Th cut bild 1">
+    <img src="radio_setup/spektrum/th_cut_2.bmp" width="200" alt="Th cut bild 2">
     </p>
 	
 	<p>
@@ -128,9 +128,9 @@
 	<br><i>Meny -> Audio Event -> Switch Changes -> Add New Sound Event.
 	   <br>Välj knapp "H" och sedan ljudet "Motorn On" och sedan "Motorn off"
 	</i>
-    <br><img src="radio_setup/spektrum/th_cut_3.bmp" width="200">
-    <img src="radio_setup/spektrum/th_cut_4.bmp" width="200">
-    <img src="radio_setup/spektrum/th_cut_5.bmp" width="200">
+    <br><img src="radio_setup/spektrum/th_cut_3.bmp" width="200" alt="Th cut bild 3">
+    <img src="radio_setup/spektrum/th_cut_4.bmp" width="200" alt="Th cut bild 4">
+    <img src="radio_setup/spektrum/th_cut_5.bmp" width="200" alt="Th cut bild 5">
     </p>
 	
     <h3>Throttle cut - Exempel - Flera märken med EdgeTX</h3>
@@ -147,22 +147,22 @@
     </p>
 	
 	<p>
-	Först skapas två logiska switchar:
+	Först skapas två "Logiska Switchar":
 	<ul>
 	<li>L01 känner av gasreglaget i kombination med position 2 på 6-positionsbrytaren.</li>
-	<li>L02 ”låser” värdet från L01 så att gasreglaget kan användas efter nollställning, och blockerar samtidigt motorn om brytaren inte står i position 2 (!6POS).</li>
+	<li>L02 ”låser” värdet från L01 så att gasreglaget kan användas efter nollställning, och blockerar samtidigt motorn om brytaren inte står i position 2 (!6POS2).</li>
     </ul>
-    <img src="radio_setup/edgetx/th_cut_1.bmp" width="400">
+    <img src="radio_setup/edgetx/th_cut_1.bmp" width="400" alt="Th cut bild 1">
     </p>
 	
 	<p>
-	Därefter läggs Special Functions in:
+	Därefter läggs "Special Functions" in:
 	<ul>
 	<li>SF1 gör en override på throttle-kanalen (CH3) när L02 inte är aktiv (!L02).</li>
 	<li>SF2–SF4 spelar upp röstmeddelanden för vald position.</li>
 	<li>SF5 nollställer timern när Pit mode är aktivt.</li>
 	</ul>
-    <img src="radio_setup/edgetx/th_cut_2.bmp" width="400">
+    <img src="radio_setup/edgetx/th_cut_2.bmp" width="400" alt="Th cut bild 2">
     </p>
 	
   </main>

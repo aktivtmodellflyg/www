@@ -6,6 +6,10 @@ footer {
   font-size: 0.9rem;
 }
 
+.navbar-brand{
+	background : #ff0000;
+}
+
 .dropdown-menu {
 	background : #E0E0E0;
 }
