@@ -3,10 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LaddaNed</title>
+  <title>Foton</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
+<script>
+    let currentNum_event = 0;
+
+	const captions_event = [
+        "<b>Hjälps åt - Eslöv Modellflygklubb</b><br>Egendesignad modell.",
+        "<b>Swapmeet - Eslöv Modellflygklubb</b><br>I depån.",
+		"<b>Läger - Ripa</b><br>Beskrivande text.",
+		"<b>Arbetsdag - Plats</b><br>Tvätta, skrapa och måla stod på agendan inför säsongen.",
+		"<b>Skojtävling - Plats</b><br>Instruktionerna. Går ut på att träffas och ha kul. Det är kanske en tävling också, vem vet.",
+		"<b>Familjedag - Plats</b><br>Beskrivande text. Gemensam lunch.",
+		"<b>Bedömning - Plats</b><br>Beskrivande text.",
+    ];
+	const totalImages_event = captions_event.length;
+
+
+    function changeImage_event(step) {
+        currentNum_event += step;
+
+        // Loopar runt: Om man är på sista bilden och klickar nästa, går den till nr 1
+        if (currentNum_event > totalImages_event) {
+            currentNum_event = 1;
+        }
+        // Om man är på första bilden och klickar bakåt, går den till sista
+        if (currentNum_event < 1) {
+            currentNum_event = totalImages_event;
+        }
+
+        // Uppdatera bilden och texten
+        const imgElement = document.getElementById('currentImage_event');
+        const counterElement = document.getElementById('imageCounter_event');
+		const captionElement = document.getElementById('imageCaption_event');
+        
+        imgElement.src = "foton_event/foto_" + currentNum_event + ".jpg";
+        counterElement.innerText = "Tema & aktiviter " + currentNum_event + " av " + totalImages_event;
+		captionElement.innerHTML = captions_event[currentNum_event - 1];
+    }
+	
+</script>
+
+
 <body>
 
   <!-- Meny -->
@@ -64,7 +105,7 @@
             <a class="dropdown-item" href="../utb/utb.html">Intro</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
-			<a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
+            <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
             <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
           </div>
           </li>
@@ -95,38 +136,30 @@
 
   <!-- Innehåll -->
   <main class="container py-4">
-    <h2>Ladda ned material</h2>
-	
-	<h3>Material som kan visas vid öppet hus, eller Modellflygesdag</h3>
-	<p>
-	  <a href="dl/RC_Info_AktivtModellflyg_240830.pdf">PDF - Enkel förklaring hur tekniken ser ut i ett RC-flygplan</a>
-	  <br><a href="dl/Regler_Sammanställning_AktivtModellflyg_250211.pdf">PDF - Regelsammanställning RCFF/SMFF vs drönarkort</a>
-    </p>
-	
-	<h3>Material och hjälp inför modellflygets dag</h3>
-    <p>
-	  <a href="dl_mfd.html">Material för att göra eget material. Eller skriva ut PDF'er att visa upp</a>
-	</p>
-	<!--
-    <p class="amf">Vill du bidra. Kontakta mig <a href="../index.html">Kontakt</a></p>
-	-->
-	<h3>Bra att ha när du flyger</h3>
-	<p>
-	  <a href="dl/Checklista_RCFlyg_AktivtModellflyg_240830.pdf">PDF - Checklista inför en flygning</a>
-	</p>
-	
-	<h3>Aktivt modellflyg på Youtube</h3>
-	<p>
-      <a href="https://www.youtube.com/@AktivtModellflyg" target="_blank" rel="noopener noreferrer">Länk</a> (Öppnas i ett nytt fönster)
-	</p>
+  
+	<div class="container text-center mt-1">
+		<div class="row justify-content-center">
+			<div class="col-md-9">
+				<div class="p-3 bg-light shadow rounded">
+				
+					<div class="d-flex justify-content-between pt-1 mb-3">
+						<button class="btn btn-primary" onclick="changeImage_event(-1)"> &laquo; Föregående</button>
+						<span id="imageCounter_event" class="align-self-center fw-bold">Blädda med knapparna</span>
+						<button class="btn btn-primary" onclick="changeImage_event(1)">Nästa &raquo;</button>
+					</div>
 
-    <h3>Märkesanpassat material</h3>
-	<h4>Spektrum</h4>
-	<p>
-	  <a href="dl/Spektrum_Setup_250802.pdf">PDF - Lämplig knapplayout på sändaren / Dubbelkommando</a>
-	</p>
-	
-	
+					<img id="currentImage_event" src="foton_event/foto_event.png" class="img-fluid rounded mb-3" alt="Foto på ett event">
+
+					<div id="imageCaption_event" class="mb-2 p-2 pt-2 text-muted">
+                      <b>Tema & aktiviteter</b><br>Välkommen till galleriet!
+					</div>
+					
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
   </main>
 
   <footer class="bg-secondary text-white text-center py-3 mt-4">

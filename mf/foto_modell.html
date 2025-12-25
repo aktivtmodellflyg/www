@@ -3,10 +3,49 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LaddaNed</title>
+  <title>Foton</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
+<script>
+    let currentNum_modell = 0;
+
+	const captions_modell = [
+        "<b>E-Flite Pitts S-1S BNF (85cm Foam)</b><br>Beskrivande text.",
+        "<b>E-Flite PF-17 BNF (110cm Foam)</b><br>E-flite PT-17 1.1m är en detaljrik replika av andra världskrigets mest ikoniska skolflygplan, utrustad med skalariktig stjärnmotor och stötdämpande landställ i aluminium. Modellen kombinerar ett klassiskt utseende med modern prestanda och smarta funktioner som verktygslöst montage, vilket gör den både enkel och rolig att flyga.",
+		"<b>Modell</b><br>Beskrivande text.",
+		"<b>Fotomodell</b><br>Kändis.",
+		"<b>Edge 540 (Balsa 170cm)</b><br>Beskrivande text.",
+		"<b>Modell</b><br>Beskrivande text.",
+    ];
+	const totalImages_modell = captions_modell.length;
+
+	function changeImage_modell(step) {
+        currentNum_modell += step;
+
+        // Loopar runt: Om man är på sista bilden och klickar nästa, går den till nr 1
+        if (currentNum_modell > totalImages_modell) {
+            currentNum_modell = 1;
+        }
+        // Om man är på första bilden och klickar bakåt, går den till sista
+        if (currentNum_modell < 1) {
+            currentNum_modell = totalImages_modell;
+        }
+
+        // Uppdatera bilden och texten
+        const imgElement = document.getElementById('currentImage_modell');
+        const counterElement = document.getElementById('imageCounter_modell');
+		const captionElement = document.getElementById('imageCaption_modell');
+        
+        imgElement.src = "foton_modell/foto_" + currentNum_modell + ".jpg";
+        counterElement.innerText = "Modell " + currentNum_modell + " av " + totalImages_modell;
+		captionElement.innerHTML = captions_modell[currentNum_modell - 1];
+    }
+
+</script>
+
+
 <body>
 
   <!-- Meny -->
@@ -64,7 +103,7 @@
             <a class="dropdown-item" href="../utb/utb.html">Intro</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
-			<a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
+            <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
             <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
           </div>
           </li>
@@ -95,38 +134,30 @@
 
   <!-- Innehåll -->
   <main class="container py-4">
-    <h2>Ladda ned material</h2>
-	
-	<h3>Material som kan visas vid öppet hus, eller Modellflygesdag</h3>
-	<p>
-	  <a href="dl/RC_Info_AktivtModellflyg_240830.pdf">PDF - Enkel förklaring hur tekniken ser ut i ett RC-flygplan</a>
-	  <br><a href="dl/Regler_Sammanställning_AktivtModellflyg_250211.pdf">PDF - Regelsammanställning RCFF/SMFF vs drönarkort</a>
-    </p>
-	
-	<h3>Material och hjälp inför modellflygets dag</h3>
-    <p>
-	  <a href="dl_mfd.html">Material för att göra eget material. Eller skriva ut PDF'er att visa upp</a>
-	</p>
-	<!--
-    <p class="amf">Vill du bidra. Kontakta mig <a href="../index.html">Kontakt</a></p>
-	-->
-	<h3>Bra att ha när du flyger</h3>
-	<p>
-	  <a href="dl/Checklista_RCFlyg_AktivtModellflyg_240830.pdf">PDF - Checklista inför en flygning</a>
-	</p>
-	
-	<h3>Aktivt modellflyg på Youtube</h3>
-	<p>
-      <a href="https://www.youtube.com/@AktivtModellflyg" target="_blank" rel="noopener noreferrer">Länk</a> (Öppnas i ett nytt fönster)
-	</p>
+  
+	<div class="container text-center mt-1">
+		<div class="row justify-content-center">
+			<div class="col-md-9">
+				<div class="p-3 bg-light shadow rounded">
+				
+					<div class="d-flex justify-content-between pt-1 mb-3">
+						<button class="btn btn-primary" onclick="changeImage_modell(-1)"> &laquo; Föregående</button>
+						<span id="imageCounter_modell" class="align-self-center fw-bold">Blädda med knapparna</span>
+						<button class="btn btn-primary" onclick="changeImage_modell(1)">Nästa &raquo;</button>
+					</div>
 
-    <h3>Märkesanpassat material</h3>
-	<h4>Spektrum</h4>
-	<p>
-	  <a href="dl/Spektrum_Setup_250802.pdf">PDF - Lämplig knapplayout på sändaren / Dubbelkommando</a>
-	</p>
-	
-	
+
+					<img id="currentImage_modell" src="foton_modell/foto_modell.png" class="img-fluid rounded mb-3" alt="Foto på en modell">
+
+					<div id="imageCaption_modell" class="mb-2 p-2 pt-2 text-muted">
+                      <b>Modeller</b><br>Välkommen till galleriet
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
   </main>
 
   <footer class="bg-secondary text-white text-center py-3 mt-4">
