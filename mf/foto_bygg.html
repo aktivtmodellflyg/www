@@ -9,37 +9,53 @@
 </head>
 
 <script>
-    let currentNum_bygg = 0;
+    let currentNum = 0;
 
-	const captions_bygg = [
+	const captions = [
 	"<b>Bygg – Inomhusmodell – Byggsats från RC-Factory, modell Click 21</b><br>Följ instruktionerna noggrant och se till att allt blir rakt och symmetriskt. Använd inte för mycket lim, eftersom det gör modellen onödigt tung. Här ligger modellen på en rutad spånskiva för att göra det enklare att bygga rakt. Metallvikter och vinklar används för att hålla delarna på rätt plats medan limmet torkar.<br><br><i>Vid limning av flexibla material är det bra att använda ett lim som ger sega fogar och inte löser upp materialet. Här används UHU-Por till allt. Tycler man limmet är för tjock eller vill ha tunnare limfogar man man späda limmet med kemisk ren bensin. Kemisk ren bensin löser även upp torkat lim, vilket är bra om man måste ta bort ett skadat servo.</i>",
 	"<b>Reparation</b><br>En kraftigt skadad vinge lagas här enligt följande:<br>1) Skär upp en ränna i frigoliten.<br>2) Lägg ned en kolfiberstav.<br>3) Applicera PU-lim (används även för trä men fungerar här också) som är utfört med få droppar vatten.<br>4) Limmet skummar upp. När det har torkat skärs överflödigt lim bort och ytan målas.",
     "<b>Bygg - Svarva noskon</b><br>Här modiferas en noskon så att den skall dölja muttern som håller propellern. Konen används också som mutter för att låsa mot den första.",
     "<b>Bygg - Kamera gimbal till FPV</b><br>Två servo för röra kameran. Piloten har en head-tracker så när man rör huvud följer kameran huvudet rörsle.",
 	"<b>Stjärnmotor</b><br>Många modellflygplan drivs av förbränningsmotorer för att få rätt ljud och känsla. Här ser du en stjärnmotor, vilket innebär att cylindrarna är placerade i en cirkel runt vevaxeln, likt strålarna i en stjärna.",
     ];
-	const totalImages_bygg = captions_bygg.length;
+	const totalImages = captions.length;
 
-	function changeImage_bygg(step) {
-        currentNum_bygg += step;
+    const urlParams = new URLSearchParams(window.location.search);
+	const fotoId = urlParams.get('id');
+	
+    document.addEventListener("DOMContentLoaded", function () {
+	  if( fotoId ){
+	    loadImage(parseInt(fotoId));
+	  }
+    });
+	
 
-        // Loopar runt: Om man är på sista bilden och klickar nästa, går den till nr 1
-        if (currentNum_bygg > totalImages_bygg) {
-            currentNum_bygg = 1;
+	function loadImage(id) {
+        if (id > totalImages) {
+            id = 1;
         }
-        // Om man är på första bilden och klickar bakåt, går den till sista
-        if (currentNum_bygg < 1) {
-            currentNum_bygg = totalImages_bygg;
+        if (id < 1) {
+            id = totalImages;
         }
 
-        // Uppdatera bilden och texten
+        currentNum = id;
+		
+		if( fotoId ){
+		  history.replaceState(null, "", "?id="+id);
+		}
+
         const imgElement = document.getElementById('currentImage_bygg');
         const counterElement = document.getElementById('imageCounter_bygg');
 		const captionElement = document.getElementById('imageCaption_bygg');
         
-        imgElement.src = "foton_bygg/foto_" + currentNum_bygg + ".jpg";
-        counterElement.innerText = "Bygg & teknik " + currentNum_bygg + " av " + totalImages_bygg;
-		captionElement.innerHTML = captions_bygg[currentNum_bygg - 1];
+        imgElement.src = "foton_bygg/foto_" + currentNum + ".jpg";
+        counterElement.innerText = "Bygg & teknik " + currentNum + " av " + totalImages;
+		captionElement.innerHTML = captions[currentNum - 1];
+    }
+
+	function changeImage_bygg(step) {
+        currentNum += step;
+	    loadImage( currentNum );
     }
 
 </script>
