@@ -67,6 +67,8 @@
             <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
             <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
             <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/tips.html">Byggtips</a>
+            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../utb/utb_links.html">Länkar</a>
           </div>
           </li>
@@ -117,15 +119,35 @@
 		<h4>Limning av EPP och andra flexibla material</h4>
 		<p>När man limmar flexibla material, som <b>EPP</b>, är det viktigt att använda ett lim som ger en <b>elastisk fog</b>, till exempel kontaktlim. Kontaktlimmet bör inte innehålla lösningsmedel som kan lösa upp materialet. UHU Por är ett vanligt lim som ofta används för detta ändamål.</p>
 		<p>Vid byggnation av inomhusmodeller är det extra viktigt att <b>bygga lätt</b>, vilket även innebär att man inte ska använda mer lim än nödvändigt.</p>
-		<p>Ett bra sätt att få bättre kontroll över limmet är att <b>tunna ut det med kemiskt ren bensin</b>. Blanda cirka 25 % bensin och 75 % lim i en spruta eller behållare och rör om. Resultatet blir ett lim som ger längre arbetstid och som lättare rinner ner i skåror, till exempel när man fäller ner en kolfiberstag i EPP.</p>
+		<p>Ett bra sätt att få bättre kontroll över limmet är att <b>tunna ut det med kemiskt ren bensin</b>. Blanda cirka 25 % bensin och 75 % lim i en spruta rör/skaka om. Resultatet blir ett lim som ger längre arbetstid och som lättare rinner ner i skåror, till exempel när man fäller ner en kolfiberstag i EPP.</p>
 		<p><b>Torktiden</b> blir naturligtvis något längre.</p>
 		<p>Limmet kan även <b>lösas upp med bensin efter att det har torkat</b>, vilket är mycket praktiskt vid reparationer. Om ett servo har gått sönder kan man droppa lite bensin runt servot och därefter enkelt lyfta bort det.</p>
 	    <p><i>Tänk på, sitt på en väl ventilerad plats.</i></p>
       </div>
 	  <div class="col-md-6 mb-2">
- 	    <img src="tips/lim_uhu_por.jpg" width="100%">
+ 	    <img src="tips/lim_uhu_por.jpg" width="100%" alt="UHU-Por & bensin">
       </div>
-	
+
+
+	  <div class="col-md-6 mb-5">
+		<h4>Servoarm och spline</h4>
+		<p>Ett servo har en utgående axel med <b>splines</b> där man trycker fast servoarmen. Olika servon har olika antal splines (”taggar”), vilket innebär att stegen mellan möjliga lägen för servoarmen kan vara både små eller stora.</p>
+		<p>Målet är att montera servoarmen så rakt(*) som möjligt från början, i stället för att trimma bort felet med sändaren. Ett servo är mer linjärt och symmetriskt runt sitt mekaniska centrum än runt ett centrum som skapats med trim eller subtrim i sändaren.
+		   <br><i>(*) rakt är ofta 90 grader mot roderstången. Se manualen för din modell, några modellen behöver lite osymmetri och då är det inte 90 grader.</i>
+		</p>
+		<p>På bilden är servot kopplat till en mottagare där sändarens <b>trim och subtrim är nollade</b>, så att man vet att sändaren skickar ut ett korrekt <b>”centrum”</b>.
+		   Då ser man att position 1 och 2 inte är optimala om man vill få servoarmen i linje med den röda referenslinjen.
+		</p>
+		<p>Genom att <b>vända</b> servoarmen <b>180 grader</b> hittar man ett läge som passar betydligt bättre, och det är detta läge som bör väljas.
+	       Vissa servoarmar (som den på bilden) möjliggör fyra <b>olika monteringslägen</b>. Då testar man helt enkelt vilket läge som ger bäst utgångsläge. I detta fall kommer man mycket nära önskat resultat. Den sista, lilla justeringen görs sedan med subtrim i sändaren.
+		</p>
+
+	  </div>
+	  <div class="col-md-6 mb-2">
+		<img src="tips/servo_arm.jpg" width="100%" alt="Servoarm och spline" >
+      </div>
+
+
 	  <div class="col-md-6 mb-5">
 		<h4>Servoarmar och korrekt geometri</h4>
 		<p>Till många inomhusmodeller följer det med en <b>specialutformad servoarm</b> som är avsedd att monteras på just det servot. Denna servoarm är anpassad för modellen och bör användas.</p>
@@ -133,7 +155,7 @@
 		<p>Tittar man noga ser man att <b>staget</b> då hamnar i <b>90 graders vinkel mot servoaxeln</b>. Detta ger en <b>symmetrisk roderrörelse</b>, där till exempel skevrodret går lika mycket upp som ner. Använder man istället en rak servoarm förändras geometrin, symmetrin försämras och modellen flyger inte som den ska.</p>
 	  </div>
 	  <div class="col-md-6 mb-2">
-		<img src="tips/arm_skev.jpg" width="100%">
+		<img src="tips/arm_skev.jpg" width="100%" alt="Rätt servoarm" >
       </div>
 
 
@@ -144,7 +166,7 @@
 		<p>Ett alternativ är att <b>limma fast ett tunt rör</b> (t.ex. alu, plast eller mässing) över staget där skruven tar. Det ger samma effekt och minskar risken för skador.</p>
 	  </div>
 	  <div class="col-md-6 mb-2">
-		<img src="tips/stag_krymp.jpg" width="100%">
+		<img src="tips/stag_krymp.jpg" width="100%" alt="Roderstag och krympslang">
       </div>
 
 
@@ -170,7 +192,7 @@
 		<i>JST göra bra kontakter men den är inte designad för detta ändamål.</i>
 	  </div>
 	  <div class="col-md-6 mb-2">
-		<img src="tips/jst_xt30.jpg" width="100%">
+		<img src="tips/jst_xt30.jpg" width="100%" alt="JST vs XT30">
       </div>
 
 
@@ -180,7 +202,7 @@
 		<p>Om motorn roterar åt fel håll är det bara att <b>byta plats på två av de tre ledningarna</b> (det spelar ingen roll vilka). Då kommer motorn att snurra åt motsatt håll.</p>
 	  </div>
 	  <div class="col-md-6 mb-2">
-		<img src="tips/motor_fas.jpg" width="100%">
+		<img src="tips/motor_fas.jpg" width="100%" alt="Motor & faser">
       </div>
 
 	  <div class="col-md-6 mb-5">
@@ -194,7 +216,7 @@
 		</p>
 	  </div>
 	  <div class="col-md-6 mb-2">
-		<img src="tips/motor_lutning.jpg" width="100%">
+		<img src="tips/motor_lutning.jpg" width="100%" alt="Motorvinkel" >
       </div>
 
 	  <div class="col-md-6 mb-5">
@@ -215,7 +237,7 @@
 		<p>På bilden syns, från vänster, en GWS SF 8×4.3 original och en modifierad, därefter en GWS DD 8×4 original och en modifierad. Lite slarvigt uttryckt kan man säga att man ”borrar ner” hålet – resultatet blir ofta både bättre passform och ett något lättare propellernav.</p>
 	  </div>
 	  <div class="col-md-6 mb-2">
-		<img src="tips/prop_flans.jpg" width="100%">
+		<img src="tips/prop_flans.jpg" width="100%" alt="Prop mindre hål">
       </div>
 
 	  <div class="col-md-6 mb-5">
@@ -232,7 +254,7 @@
 		<p>Nackdelen är att modellen blir betydligt mer instabil vid inverterad flygning. När man vill börja flyga upp och ned kan man därför <b>successivt flytta batteriet högre upp</b> i modellen.</p>
 	  </div>
 	  <div class="col-md-6 mb-2">
-		<img src="tips/cg_3d.jpg" width="100%">
+		<img src="tips/cg_3d.jpg" width="100%" alt="Modell CG">
       </div>
 	  
 	</div>
@@ -250,7 +272,7 @@
 		</p>
 	  </div>
 	  <div class="col-md-6 mb-2">
-	    <img src="tips/lim_uhu_hart.jpg" width="100%">
+	    <img src="tips/lim_uhu_hart.jpg" width="100%" alt="UHU-Hart och aceton">
       </div>
     </div>	
 
@@ -266,7 +288,7 @@
 		<p>Om <b>cellplasten</b> har blivit <b>mjuk</b> kan du förstärka den genom att skära ut en ränna, lägga i ett <b>kolfiberstag</b> och därefter applicera PU-blandningen. Se bilden till höger för en steg-för-steg-beskrivning. När limmet har torkat kan du enkelt skära bort det överflöd som svällt upp med en vass kniv.</p>
 	  </div>
 	  <div class="col-md-6 mb-2">
-	    <img src="tips/lim_pu.jpg" width="100%">
+	    <img src="tips/lim_pu.jpg" width="100%" alt="PU-Lim och vatten">
       </div>
     </div>	
 	
