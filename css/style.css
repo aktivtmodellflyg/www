@@ -6,16 +6,39 @@ footer {
   font-size: 0.9rem;
 }
 
-.navbar-brand{
-	background : #ff0000;
-}
-
 .dropdown-menu {
 	background : #E0E0E0;
 }
-
 
 .amf {
 	background-color: yellow;
 	color:red;
 }
+
+/* ---------- */
+
+
+/* Enbart lokalt
+.navbar-brand{
+	background : #00ff00;
+}
+.test-only{
+	background-color: yellow;
+	color:black;
+}
+*/
+
+/* Enbart på testsidan */
+.navbar-brand{
+	background : #ff0000;
+}
+.test-only{
+	background-color: yellow;
+	color:red;
+
+
+/* Enbart på hemsidan
+.test-only{
+    display: none;
+}
+*/

@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prova spaka</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigationsfält -->
+  <!-- Meny -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
+    <div class="container">
+      <a class="navbar-brand p-0" href="../index.html"><img src="../images/amf_90x90.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+		  
+          <li class="nav-item"><a class="nav-link" href="../mfd/mfd.html">
+		  Modellflygets dag
+		  </a></li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modellflyg
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../mf/mf.html">Detta är modellflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/unga.html">Unga</a>
+            <a class="dropdown-item" href="../mf/avancera.html">Avancera</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/foto_event.html">Foto Tema & event</a>
+            <a class="dropdown-item" href="../mf/foto_bygg.html">Foto Bygg & teknik</a>
+            <a class="dropdown-item" href="../mf/foto_modell.html">Foto Modeller</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Börja
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../borja/borja.html">Hur man börjar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/radio.html">Radio</a>
+            <a class="dropdown-item" href="../borja/laddare.html">Laddare</a>
+            <a class="dropdown-item" href="../borja/modell_wing.html">Flygplan</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/butiker.html">Butiker</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Utbildning
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../utb/regler.html">Regler</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
+            <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
+            <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/tips.html">Byggtips</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/utb_links.html">Länkar</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Uppdatera
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../update/update.html">Intro</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../update/spektrum.html">Spektrum</a>
+            <a class="dropdown-item" href="../update/futaba.html">Futaba</a>
+            <a class="dropdown-item" href="../update/frsky.html">FrSky med Ethos</a>
+            <a class="dropdown-item" href="../update/radiomaster.html">EdgeTX, ELRS & MM - RadioMaster</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  Ladda ned
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../download/dl_mfd.html">För klubbar</a>
+            <a class="dropdown-item" href="../download/dl_pilot.html">För piloter</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../download/dl_links.html">Länkar</a>
+          </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Huvudinnehåll -->
+  <main class="container py-4">
+	<h2>Prova spaka - Grundläggande spakstyrning av flygplan</h2>
+
+    <div class="row mt-1">
+	  <div class="col-md-8">
+		<p>När man styr en modell gäller alltid att spakrörelserna motsvarar hur det rörelsen är sett från flygplanet och inte mot marken.</p>
+		<p><b>Högerspaken</b> på sändaren fungerar på samma sätt som styrspaken i ett riktigt flygplan:
+		  <br>– <b>Drar</b> man spaken mot sig börjar planet <b>stiga</b>, för man spaken framåt börjar planet sjunka (Höjdroder).
+		  <br>– För man spaken åt <b>vänster lutar</b> planet åt <b>vänster</b>, och åt höger lutar det åt höger (Skevroder).
+		</p>
+		<p><b>Vänsterspaken</b> reglerar <b>gasen</b> (uppåt = mer gas) samt <b>sidorodret</b> i sidled, vilket motsvarar pedalerna i ett riktigt flygplan.</p>
+		<p>Första gången man provar brukar det vara klokt att låta bli att använda vänsterspaken och i stället koncentrera sig på höger spak. Många modeller kan flygas på detta sätt genom att ställa in en ”lagom” gas och acceptera att svängarna inte blir helt perfekta.</p>
+		<p>
+		Alla modeller uppför sig inte på samma sätt, och instruktören du flyger med kan ha programmerat in mixerfunktioner för att underlätta för en nybörjare.
+		Många nybörjarmodeller liknar dock varandra, så se detta som en mycket förenklad och generell guide.
+		Lyssna alltid på den du flyger dubbelkommando med och hur just den modellen fungerar.
+		</p>
+		<p><i><b>Tänk på:</b> Gör alltid små lugna spakutslag och använd tiden. Snabba, stora utslag gör allt svårare. Jämför, en bil kan svänga 90 grader med både ett lite rattutslag, mer tid och större kurva.</i></p>
+	  </div>
+
+	  <div class="col-md-4">
+		<img src="prova/prova_dk.jpg" alt="Prova spaka med instruktör">
+	  </div>
+	</div>
+
+	
+    <hr>
+	<h3>Stiga och falla</h3>
+    <div class="row mt-1">
+	  <div class="col-md-7">
+		<p>Bilden till höger visar ett flygplan som flyger bort från dig, något åt höger.
+		  <br>Spaken är i neutralläget/mitten.
+		</p>
+	  </div>
+	  <div class="col-md-4 mb-1">
+        <img src="prova/rakt_tx.jpg" width="200px">
+        <img src="prova/rakt.jpg" width="200px">
+	  </div>
+
+
+	  <div class="col-md-7">
+	    <p>Drar man spaken mot sig stiger planet och lutningen ökar så länge man håller spaken dragen.</p>
+		<p><i><b>Tänk på:</b> Hastigheten sjunker om man inte ökar gasen, så stig måttligt med fast gas.</i></p>
+	  </div>
+	  <div class="col-md-4 mb-1">
+        <img src="prova/upp_tx.jpg" width="200px">
+        <img src="prova/upp.jpg" width="200px">
+	  </div>
+
+	  <div class="col-md-7">
+	    <p>För att återgå till planflykt måste man föra spaken framåt igen. Om man trycker fram spaken för länge börjar planet i stället sjunka.
+		  <br>Som bilden visar kan det på lite avstånd vara svårt att avgöra om modellen flyger parallellt med marken eller sjunker, eftersom man ser planet underifrån. Jämför man första bilden så ser man att den faller. Modeller ser mindre ut då den är längre bort.
+		</p>
+		<p><i><b>Tänk på:</b> Hastigheten ökar om man sjunker så man gör minska gasen, så dyk inte för snabbt med fast gas.</i></p>
+ 	  </div>
+	  <div class="col-md-4 mb-1">
+        <img src="prova/ned_tx.jpg" width="200px">
+        <img src="prova/ned.jpg" width="200px">
+	  </div>
+	  
+    </div>
+	
+
+    <hr>	  
+	<h3>Vänstersväng</h3>
+
+	<p>Man kan lätt tro att man svänger ett flygplan åt vänster genom att bara dra spaken åt vänster, ungefär som när man styr en bil.
+	   Så fungerar det inte riktigt. Ett flygplan svänger främst med höjdrodret.
+       Först lutar man planet åt vänster, sedan ger man höjd för att svänga runt, och till sist planar man ut planet igen.
+	   För att planet inte ska ändra höjd och för att riktningen ska bli korrekt krävs precision, rätt spakutslag och riktning vid varje tillfälle.
+	</p>
+
+	<p>Nedan beskrivs grunderna i en vänstersväng.</p>
+	
+    <div class="row mt-1">
+	  <div class="col-md-7">
+	    <p><b>1) </b>
+		  Modellen flyger bort från dig och lutar i detta fall svagt åt höger.
+		  <br>Inled vänstersvängen genom att luta planet åt vänster. För spaken lite åt vänster och ge modellen tid att reagera, i stället för att dra mer i spaken.
+		</p>
+ 	  </div>
+	  <div class="col-md-4 mb-1">
+        <img src="prova/1_tx.jpg" width="200px">
+        <img src="prova/1.jpg" width="200px">
+	  </div>
+	  
+      <div class="col-md-7">
+	    <p><b>2) </b>
+		  Modellen har nu börjat luta lagom mycket åt vänster. Den börjar samtidigt tappa lite höjd eftersom den effektiva vingytan mot marken minskar.
+          Höjdrodret kommer nu att vara både ”uppåt” och åt vänster sett från marken, eftersom modellen lutar.
+          Börja därför en spakrörelse som innebär mindre vänster (sluta luta mer) och övergå till enbart höjd för att genomföra själva svängen.
+          <br><br>Om höjdutslaget matchar modellens lutningsvinkel och hastighet kommer höjden att hållas trots svängen.
+		</p>
+ 	  </div>
+	  <div class="col-md-4 mb-1">
+        <img src="prova/2_tx.jpg" width="200px">
+        <img src="prova/2.jpg" width="200px">
+	  </div>
+
+      <div class="col-md-7">
+	    <p><b>3) </b>
+	      Håll höjdrodret kvar för att fullfölja svängen, fram till strax innan den riktning du vill flyga i.
+		  <br><br><i><b>Tänk på:</b> Tappar man höjd kan man ge mer höjd som då också resulterar i en kraftigare sväng och behöver mer gas. Inför nästa sväng, luta planet mindre.</i>
+		</p>
+ 	  </div>
+	  <div class="col-md-4 mb-1">
+        <img src="prova/3_tx.jpg" width="200px">
+        <img src="prova/3.jpg" width="200px">
+	  </div>
+
+      <div class="col-md-7">
+	    <p><b>4) </b>
+		  Svängen närmar sig sitt slut och det är dags att räta upp modellen.
+		  <br>Börja en spakrörelse som innebär mindre höjd (sluta svänga) och övergå till höger för att luta tillbaka planet till planflykt.		
+		</p>
+ 	  </div>
+	  <div class="col-md-4 mb-1">
+        <img src="prova/4_tx.jpg" width="200px">
+        <img src="prova/4.jpg" width="200px">
+	  </div>
+
+      <div class="col-md-7">
+	    <p><b>5) </b>
+		  Håll spaken i detta läge en kort stund tills vingarna åter är parallella med marken.
+		</p>
+ 	  </div>
+	  <div class="col-md-4 mb-1">
+        <img src="prova/5_tx.jpg" width="200px">
+        <img src="prova/5.jpg" width="200px">
+	  </div>
+
+      <div class="col-md-7">
+	    <p><b>6) </b>
+		  För tillbaka spaken till neutralläge. Modellen flyger nu stabilt vidare i den nya riktningen.
+ 		  <br><br><i><b>Tänk på:</b> Har du ändrat höjd ? Justera detta nu (lugnt) innan nästa sväng.</i>
+		</p>
+ 	  </div>
+	  <div class="col-md-4 mb-1">
+        <img src="prova/6_tx.jpg" width="200px">
+        <img src="prova/6.jpg" width="200px">
+	  </div>
+
+    </div>
+
+
+    <hr>	  
+	<h3>Högersväng</h3>
+	<p>
+	  Man gör på samma sätt som in en vänstersväng, byta bara vänster mot höger och höger med vänster.
+	  <br>Höjden är denna samma.
+	</p>
+	  
+  </main>
+
+  <footer class="bg-secondary text-white text-center py-3 mt-4">
+    Vi ska ha kul tillsammans - En aktiv hobby i luften under RCFF, SMFF eller med drönarkort
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
