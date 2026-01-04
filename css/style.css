@@ -26,8 +26,7 @@ footer {
 	background-color: yellow;
 	color:black;
 }
-*/
-
+*(
 
 /* Enbart på testsidan */
 .navbar-brand{
@@ -35,7 +34,7 @@ footer {
 }
 .test-only{
 	background-color: yellow;
-	color:red;
+	color:black;
 }
 
 
