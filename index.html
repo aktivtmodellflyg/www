@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- Navigationsfält -->
+  <!-- Meny -->
   <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
     <div class="container">
       <a class="navbar-brand p-0" href="index.html"><img src="images/amf_90x90.png" alt="logo"></a>
@@ -25,10 +25,10 @@
 		  </a></li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Modellflyg
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown1">
             <a class="dropdown-item" href="mf/mf.html">Detta är modellflyg</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="mf/unga.html">Unga</a>
@@ -41,10 +41,10 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Börja
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown2">
             <a class="dropdown-item" href="borja/borja.html">Hur man börjar</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="borja/radio.html">Radio</a>
@@ -56,10 +56,10 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Utbildning
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
             <a class="dropdown-item" href="utb/regler.html">Regler</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="utb/basic_plane.html">Uppbyggnad RC-Plan</a>
@@ -67,16 +67,16 @@
             <a class="dropdown-item" href="utb/checklist.html">Checklista</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="utb/tips.html">Byggtips</a>
-			<div class="dropdown-divider"></div>
+            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="utb/utb_links.html">Länkar</a>
           </div>
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Uppdatera
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown4">
             <a class="dropdown-item" href="update/update.html">Intro</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="update/spektrum.html">Spektrum</a>
@@ -87,10 +87,10 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		  Ladda ned
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown5">
             <a class="dropdown-item" href="download/dl_mfd.html">För klubbar</a>
             <a class="dropdown-item" href="download/dl_pilot.html">För piloter</a>
             <div class="dropdown-divider"></div>
@@ -105,7 +105,7 @@
 
   <!-- Huvudinnehåll -->
   <main class="container py-4">
-	<h2>Aktivt Modellflyg</h2>
+	<h1 class="h2">Aktivt Modellflyg</h1>
 	
     <div class="row mt-1">
 	  <div class="col-md-8">
@@ -128,42 +128,43 @@
 		
       </div>			
 	  <div class="col-md-4">
-        <img src="mf/foton_modell/foto_1.jpg" width="100%" alt="Landskapsbild med en flygande modell">
+        <img src="mf/foton_modell/foto_1.jpg" class="img-fluid" alt="Landskapsbild med en flygande modell">
 	  </div>
 	</div>
 
 
 	<hr>
-	<h4>Nyheter</h4>
+	<h2 class="h4">Nyheter</h2>
     <div class="row mt-1">
 	  <div class="col-md-6">
 		<ul>
-	        <li class="test-only">26xxxx - Lagt in instruktion <a href="mf/prova.html">Prova spaka</a></li>
+	        <li class="test-only">26xxxx - Lagt in instruktion för <a href="mf/prova.html">Prova spaka</a></li>
 		    <li>260103 - Lagt in lite <a href="utb/tips.html">byggtips</a></li>
 			<li>251230 - Förenklat nedladdning av material <a href="download/dl_mfd.html">för klubbar</a> och <a href="download/dl_pilot.html">för piloter</a></li>
 			<li>251223 - Datum spikat för <a href="mfd/mfd.html">Modellflygets dag</a></li>
-			<li>251214 - Aktivt modellflyg har landat på webben</li>
 		</ul>
       </div>
 	  <div class="col-md-6">
 		<ul>
+			<li>251214 - Aktivt modellflyg har landat på webben</li>
 		</ul>
       </div>
     </div>
 
 	
 	<hr>
-	<h4>Bidra</h4>
-    <p>Är du flyglärare eller arbetar med rekrytering av nya medlemmar i en klubb?</p>
-    <ul>
-      <li>Vilka återkommande frågor får du som borde förklaras här?</li>
-      <li>Saknas det allmänt material som borde finnas här?</li>
-	  <li>Hittar du felaktigheter på sidan eller vill bidra med material, är du varmt välkommen att kontakta oss.</li>
-    </ul>
-    <p>
+	<h2 class="h4">Bidra</h2>
+	<p style="margin-bottom: 0;">Hittar du felaktigheter på sidan, eller vill bidra med material, är du varmt välkommen att kontakta oss.
+	  <br>Är du flyglärare eller arbetar med rekrytering av nya medlemmar i en klubb har du kanske värdefull återkoppling om vad som saknas, till exempel:
+	</p>
+	<ul>
+	  <li>Vilka återkommande frågor får du som borde förklaras här?</li>
+	  <li>Saknas det allmänt material som borde finnas på sidan?</li>
+	</ul>
+
 	
     <hr>
-    <h4>Kontakt</h4>
+    <h2 class="h4">Kontakt</h2>
 	
     <table>
 	 <tbody>
@@ -171,12 +172,12 @@
 		 <td>
 		   <p>
 		     <img src="images/amf_90x90.png" alt="Logo">
-			 <i class="test-only">TestSidan: <a href="todo.html">Pågående arbete</a></i>
+			 <i class="test-only">TestSidan: <a href="test/todo.html">Pågående arbete</a></i>
 		   </p>
 		 </td>
 		 <td>
 		  <p>
-            <b>E-post:</b> aktivtmodellflyg <img src="images/at.png"> gmail.com
+            <b>E-post:</b> aktivtmodellflyg <img src="images/at.png" alt="(at)"> gmail.com
 		    <br><b>Instagram:</b> <a href="https://www.instagram.com/aktivt_modellflyg" target="_blank" rel="noopener noreferrer">www.instagram.com/aktivt_modellflyg</a>
 		    <br><b>Facebook:</b> <a href="https://www.facebook.com/groups/aktivtmodellflyg" target="_blank" rel="noopener noreferrer">www.facebook.com/groups/aktivtmodellflyg</a> <i>Gå med om du vill bidra till denna sida</i>
 		    <br><b>YouTube:</b> <a href="https://www.youtube.com/@AktivtModellflyg" target="_blank" rel="noopener noreferrer">www.youtube.com/@AktivtModellflyg</a>

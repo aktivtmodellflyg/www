@@ -7,8 +7,138 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
+<body>
 
-<script>
+  <!-- Meny -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
+    <div class="container">
+      <a class="navbar-brand p-0" href="../index.html"><img src="../images/amf_90x90.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+		  
+          <li class="nav-item"><a class="nav-link" href="../mfd/mfd.html">
+		  Modellflygets dag
+		  </a></li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modellflyg
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" href="../mf/mf.html">Detta är modellflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/unga.html">Unga</a>
+            <a class="dropdown-item" href="../mf/avancera.html">Avancera</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/foto_event.html">Foto Tema & event</a>
+            <a class="dropdown-item" href="../mf/foto_bygg.html">Foto Bygg & teknik</a>
+            <a class="dropdown-item" href="../mf/foto_modell.html">Foto Modeller</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Börja
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="../borja/borja.html">Hur man börjar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/radio.html">Radio</a>
+            <a class="dropdown-item" href="../borja/laddare.html">Laddare</a>
+            <a class="dropdown-item" href="../borja/modell_wing.html">Flygplan</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/butiker.html">Butiker</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Utbildning
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="../utb/regler.html">Regler</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
+            <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
+            <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/tips.html">Byggtips</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/utb_links.html">Länkar</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Uppdatera
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown4">
+            <a class="dropdown-item" href="../update/update.html">Intro</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../update/spektrum.html">Spektrum</a>
+            <a class="dropdown-item" href="../update/futaba.html">Futaba</a>
+            <a class="dropdown-item" href="../update/frsky.html">FrSky med Ethos</a>
+            <a class="dropdown-item" href="../update/radiomaster.html">EdgeTX, ELRS & MM - RadioMaster</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  Ladda ned
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown5">
+            <a class="dropdown-item" href="../download/dl_mfd.html">För klubbar</a>
+            <a class="dropdown-item" href="../download/dl_pilot.html">För piloter</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../download/dl_links.html">Länkar</a>
+          </div>
+          </li>
+		  
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Innehåll -->
+  <main class="container py-4">
+
+	<div class="container text-center mt-1">
+		<div class="row justify-content-center"> 
+			<div class="col-md-9">
+				<div class="p-3 bg-light shadow rounded">
+				
+					<div class="d-flex justify-content-between pt-1 mb-3">
+						<button class="btn btn-primary" onclick="changeImage_bygg(-1)"> &laquo; Föregående</button>
+						<span id="imageCounter_bygg" class="align-self-center fw-bold">Blädda med knapparna</span>
+						<button class="btn btn-primary" onclick="changeImage_bygg(1)">Nästa &raquo;</button>
+					</div>
+
+
+					<img id="currentImage_bygg" src="foton_bygg/foto_bygg.png" class="img-fluid rounded mb-3" alt="Foto på en teknik">
+
+					<div id="imageCaption_bygg" class="mb-2 p-2 pt-2 text-muted">
+                      <b>Bygg & teknik</b><br>Välkommen till galleriet
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+  </main>
+
+  <footer class="bg-secondary text-white text-center py-3 mt-4">
+    Vi ska ha kul tillsammans - En aktiv hobby i luften under RCFF, SMFF eller med drönarkort
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+  <script>
     let currentNum = 0;
 
 	const captions = [
@@ -60,134 +190,5 @@
 </script>
 
 
-<body>
-
-  <!-- Meny -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
-    <div class="container">
-      <a class="navbar-brand p-0" href="../index.html"><img src="../images/amf_90x90.png" alt="logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-		  
-          <li class="nav-item"><a class="nav-link" href="../mfd/mfd.html">
-		  Modellflygets dag
-		  </a></li>
-
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Modellflyg
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../mf/mf.html">Detta är modellflyg</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../mf/unga.html">Unga</a>
-            <a class="dropdown-item" href="../mf/avancera.html">Avancera</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../mf/foto_event.html">Foto Tema & event</a>
-            <a class="dropdown-item" href="../mf/foto_bygg.html">Foto Bygg & teknik</a>
-            <a class="dropdown-item" href="../mf/foto_modell.html">Foto Modeller</a>
-          </div>
-          </li>
-
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Börja
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../borja/borja.html">Hur man börjar</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../borja/radio.html">Radio</a>
-            <a class="dropdown-item" href="../borja/laddare.html">Laddare</a>
-            <a class="dropdown-item" href="../borja/modell_wing.html">Flygplan</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../borja/butiker.html">Butiker</a>
-          </div>
-          </li>
-
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Utbildning
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../utb/regler.html">Regler</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
-            <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
-            <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../utb/tips.html">Byggtips</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../utb/utb_links.html">Länkar</a>
-          </div>
-          </li>
-
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Uppdatera
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../update/update.html">Intro</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../update/spektrum.html">Spektrum</a>
-            <a class="dropdown-item" href="../update/futaba.html">Futaba</a>
-            <a class="dropdown-item" href="../update/frsky.html">FrSky med Ethos</a>
-            <a class="dropdown-item" href="../update/radiomaster.html">EdgeTX, ELRS & MM - RadioMaster</a>
-          </div>
-          </li>
-
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		  Ladda ned
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../download/dl_mfd.html">För klubbar</a>
-            <a class="dropdown-item" href="../download/dl_pilot.html">För piloter</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../download/dl_links.html">Länkar</a>
-          </div>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Innehåll -->
-  <main class="container py-4">
-
-	<div class="container text-center mt-1">
-		<div class="row justify-content-center"> 
-			<div class="col-md-9">
-				<div class="p-3 bg-light shadow rounded">
-				
-					<div class="d-flex justify-content-between pt-1 mb-3">
-						<button class="btn btn-primary" onclick="changeImage_bygg(-1)"> &laquo; Föregående</button>
-						<span id="imageCounter_bygg" class="align-self-center fw-bold">Blädda med knapparna</span>
-						<button class="btn btn-primary" onclick="changeImage_bygg(1)">Nästa &raquo;</button>
-					</div>
-
-
-					<img id="currentImage_bygg" src="foton_bygg/foto_bygg.png" class="img-fluid rounded mb-3" alt="Foto på en teknik">
-
-					<div id="imageCaption_bygg" class="mb-2 p-2 pt-2 text-muted">
-                      <b>Bygg & teknik</b><br>Välkommen till galleriet
-					</div>
-				
-				</div>
-			</div>
-		</div>
-	</div>
-
-  </main>
-
-  <footer class="bg-secondary text-white text-center py-3 mt-4">
-    Vi ska ha kul tillsammans - En aktiv hobby i luften under RCFF, SMFF eller med drönarkort
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

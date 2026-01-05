@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  <!-- Navigationsfält -->
   <!-- Meny -->
   <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
     <div class="container">
@@ -26,10 +25,10 @@
 		  </a></li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Modellflyg
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown1">
             <a class="dropdown-item" href="../mf/mf.html">Detta är modellflyg</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../mf/unga.html">Unga</a>
@@ -42,10 +41,10 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Börja
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown2">
             <a class="dropdown-item" href="../borja/borja.html">Hur man börjar</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../borja/radio.html">Radio</a>
@@ -57,10 +56,10 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Utbildning
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
             <a class="dropdown-item" href="../utb/regler.html">Regler</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
@@ -74,10 +73,10 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Uppdatera
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown4">
             <a class="dropdown-item" href="../update/update.html">Intro</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../update/spektrum.html">Spektrum</a>
@@ -88,17 +87,17 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		  Ladda ned
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown5">
             <a class="dropdown-item" href="../download/dl_mfd.html">För klubbar</a>
             <a class="dropdown-item" href="../download/dl_pilot.html">För piloter</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../download/dl_links.html">Länkar</a>
           </div>
           </li>
-
+		  
         </ul>
       </div>
     </div>
@@ -106,7 +105,7 @@
 
   <!-- Huvudinnehåll -->
   <main class="container py-4">
-	<h2>Prova spaka - Grundläggande spakstyrning av flygplan</h2>
+	<h1 class="h2">Prova spaka - Grundläggande spakstyrning av flygplan</h1>
 
     <div class="row mt-1">
 	  <div class="col-md-8">
@@ -126,22 +125,24 @@
 	  </div>
 
 	  <div class="col-md-4">
-		<img src="prova/prova_dk.jpg" alt="Prova spaka med instruktör">
+		<img src="prova/prova_dk.jpg" class="img-fluid" alt="Prova spaka med instruktör">
 	  </div>
 	</div>
 
 	
     <hr>
-	<h3>Stiga och falla</h3>
+	<h2 class="h3">Stiga och falla</h2>
     <div class="row mt-1">
 	  <div class="col-md-7">
 		<p>Bilden till höger visar ett flygplan som flyger bort från dig, något åt höger.
 		  <br>Spaken är i neutralläget/mitten.
 		</p>
 	  </div>
-	  <div class="col-md-4 mb-1">
-        <img src="prova/rakt_tx.jpg" width="200px">
-        <img src="prova/rakt.jpg" width="200px">
+	  <div class="col-md-2 mb-1">
+        <img src="prova/rakt_tx.jpg" class="img-fluid" alt="spak rakt">
+	  </div>
+	  <div class="col-md-2 mb-1">
+        <img src="prova/rakt.jpg" class="img-fluid w-100" alt="plan rakt">
 	  </div>
 
 
@@ -149,9 +150,11 @@
 	    <p>Drar man spaken mot sig stiger planet och lutningen ökar så länge man håller spaken dragen.</p>
 		<p><i><b>Tänk på:</b> Hastigheten sjunker om man inte ökar gasen, så stig måttligt med fast gas.</i></p>
 	  </div>
-	  <div class="col-md-4 mb-1">
-        <img src="prova/upp_tx.jpg" width="200px">
-        <img src="prova/upp.jpg" width="200px">
+	  <div class="col-md-2 mb-1">
+        <img src="prova/upp_tx.jpg" class="img-fluid" alt="spak upp">
+	  </div>
+	  <div class="col-md-2 mb-1">
+        <img src="prova/upp.jpg" class="img-fluid w-100" alt="plan upp">
 	  </div>
 
 	  <div class="col-md-7">
@@ -160,16 +163,18 @@
 		</p>
 		<p><i><b>Tänk på:</b> Hastigheten ökar om man sjunker så man gör minska gasen, så dyk inte för snabbt med fast gas.</i></p>
  	  </div>
-	  <div class="col-md-4 mb-1">
-        <img src="prova/ned_tx.jpg" width="200px">
-        <img src="prova/ned.jpg" width="200px">
+	  <div class="col-md-2 mb-1">
+        <img src="prova/ned_tx.jpg" class="img-fluid" alt="spak ned">
+	  </div>
+	  <div class="col-md-2 mb-1">
+        <img src="prova/ned.jpg" class="img-fluid w-100" alt="plan ned">
 	  </div>
 	  
     </div>
 	
 
     <hr>	  
-	<h3>Vänstersväng</h3>
+	<h2 class="h3">Vänstersväng</h2>
 
 	<p>Man kan lätt tro att man svänger ett flygplan åt vänster genom att bara dra spaken åt vänster, ungefär som när man styr en bil.
 	   Så fungerar det inte riktigt. Ett flygplan svänger främst med höjdrodret.
@@ -186,9 +191,11 @@
 		  <br>Inled vänstersvängen genom att luta planet åt vänster. För spaken lite åt vänster och ge modellen tid att reagera, i stället för att dra mer i spaken.
 		</p>
  	  </div>
-	  <div class="col-md-4 mb-1">
-        <img src="prova/1_tx.jpg" width="200px">
-        <img src="prova/1.jpg" width="200px">
+	  <div class="col-md-2 mb-1">
+        <img src="prova/1_tx.jpg" class="img-fluid" alt="spak vänster steg 1">
+	  </div>
+	  <div class="col-md-2 mb-1">
+        <img src="prova/1.jpg" class="img-fluid w-100" alt="plan vänster steg 1">
 	  </div>
 	  
       <div class="col-md-7">
@@ -199,9 +206,11 @@
           <br><br>Om höjdutslaget matchar modellens lutningsvinkel och hastighet kommer höjden att hållas trots svängen.
 		</p>
  	  </div>
-	  <div class="col-md-4 mb-1">
-        <img src="prova/2_tx.jpg" width="200px">
-        <img src="prova/2.jpg" width="200px">
+	  <div class="col-md-2 mb-1">
+        <img src="prova/2_tx.jpg" class="img-fluid" alt="spak vänster steg 2">
+	  </div>
+	  <div class="col-md-2 mb-1">
+        <img src="prova/2.jpg" class="img-fluid w-100" alt="plan vänster steg 2">
 	  </div>
 
       <div class="col-md-7">
@@ -210,9 +219,11 @@
 		  <br><br><i><b>Tänk på:</b> Tappar man höjd kan man ge mer höjd som då också resulterar i en kraftigare sväng och behöver mer gas. Inför nästa sväng, luta planet mindre.</i>
 		</p>
  	  </div>
-	  <div class="col-md-4 mb-1">
-        <img src="prova/3_tx.jpg" width="200px">
-        <img src="prova/3.jpg" width="200px">
+	  <div class="col-md-2 mb-1">
+        <img src="prova/3_tx.jpg" class="img-fluid" alt="spak vänster steg 3">
+	  </div>
+	  <div class="col-md-2 mb-1">
+        <img src="prova/3.jpg" class="img-fluid w-100" alt="plan vänster steg 3">
 	  </div>
 
       <div class="col-md-7">
@@ -221,9 +232,11 @@
 		  <br>Börja en spakrörelse som innebär mindre höjd (sluta svänga) och övergå till höger för att luta tillbaka planet till planflykt.		
 		</p>
  	  </div>
-	  <div class="col-md-4 mb-1">
-        <img src="prova/4_tx.jpg" width="200px">
-        <img src="prova/4.jpg" width="200px">
+	  <div class="col-md-2 mb-1">
+        <img src="prova/4_tx.jpg" class="img-fluid" alt="spak vänster steg 4">
+	  </div>
+	  <div class="col-md-2 mb-1">
+        <img src="prova/4.jpg" class="img-fluid w-100" alt="plan vänster steg 4">
 	  </div>
 
       <div class="col-md-7">
@@ -231,9 +244,11 @@
 		  Håll spaken i detta läge en kort stund tills vingarna åter är parallella med marken.
 		</p>
  	  </div>
-	  <div class="col-md-4 mb-1">
-        <img src="prova/5_tx.jpg" width="200px">
-        <img src="prova/5.jpg" width="200px">
+	  <div class="col-md-2 mb-1">
+        <img src="prova/5_tx.jpg" class="img-fluid" alt="spak vänster steg 5">
+	  </div>
+	  <div class="col-md-2 mb-1">
+        <img src="prova/5.jpg" class="img-fluid w-100" alt="plan vänster steg 5">
 	  </div>
 
       <div class="col-md-7">
@@ -242,16 +257,18 @@
  		  <br><br><i><b>Tänk på:</b> Har du ändrat höjd ? Justera detta nu (lugnt) innan nästa sväng.</i>
 		</p>
  	  </div>
-	  <div class="col-md-4 mb-1">
-        <img src="prova/6_tx.jpg" width="200px">
-        <img src="prova/6.jpg" width="200px">
+	  <div class="col-md-2 mb-1">
+        <img src="prova/6_tx.jpg" class="img-fluid" alt="spak vänster steg 6">
+	  </div>
+	  <div class="col-md-2 mb-1">
+        <img src="prova/6.jpg" class="img-fluid w-100" alt="plan vänster steg 6">
 	  </div>
 
     </div>
 
 
     <hr>	  
-	<h3>Högersväng</h3>
+	<h2 class="h3">Högersväng</h2>
 	<p>
 	  Man gör på samma sätt som in en vänstersväng, byta bara vänster mot höger och höger med vänster.
 	  <br>Höjden är denna samma.

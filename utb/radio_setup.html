@@ -10,7 +10,6 @@
 <body>
 
   <!-- Meny -->
-  <!-- Meny -->
   <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
     <div class="container">
       <a class="navbar-brand p-0" href="../index.html"><img src="../images/amf_90x90.png" alt="logo"></a>
@@ -26,10 +25,10 @@
 		  </a></li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Modellflyg
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown1">
             <a class="dropdown-item" href="../mf/mf.html">Detta är modellflyg</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../mf/unga.html">Unga</a>
@@ -42,10 +41,10 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Börja
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown2">
             <a class="dropdown-item" href="../borja/borja.html">Hur man börjar</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../borja/radio.html">Radio</a>
@@ -57,10 +56,10 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Utbildning
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
             <a class="dropdown-item" href="../utb/regler.html">Regler</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
@@ -74,10 +73,10 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Uppdatera
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown4">
             <a class="dropdown-item" href="../update/update.html">Intro</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../update/spektrum.html">Spektrum</a>
@@ -88,17 +87,17 @@
           </li>
 
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		  Ladda ned
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown5">
             <a class="dropdown-item" href="../download/dl_mfd.html">För klubbar</a>
             <a class="dropdown-item" href="../download/dl_pilot.html">För piloter</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="../download/dl_links.html">Länkar</a>
           </div>
           </li>
-
+		  
         </ul>
       </div>
     </div>
@@ -106,7 +105,7 @@
 
   <!-- Innehåll -->
   <main class="container py-4">
-    <h2>Knapplayout</h2>
+    <h1 class="h2">Knapplayout</h1>
 	<p>Alla sändare kan programmeras så att knappar och brytare får de funktioner du själv vill ha – det är till stor del en smaksak.
 	   Innan du bestämmer dig kan det dock vara bra att tänka igenom hur du flyger. Vänster spak är ofta lättare att släppa under flygning,
 	   vilket gör att knappar och brytare på vänster sida kan vara enklare att använda för funktioner som du använder ofta.</p>
@@ -118,9 +117,12 @@
 	<p>Nedan visas ett exempel på knapplayout på en Spektrum DX9, men de flesta sändare har liknande placering av knappar och brytare. Ta tänket med dig och använd det på andra märken.
     <br><img src="radio_setup/knapp_layout_1.png" width="800" alt="Knapplayout">
 	</p>
+
+
 	
 	<hr>
-    <h3>Throttle cut - En säkerhet för alla</h3>
+    <h1 class="h2">Nödvändiga funktioner</h1>
+    <h2 class="h3">Throttle cut - En säkerhet för alla</h2>
 	
 	<p>En funktion som många hoppar över är att lägga in throttle cut på modellen. Om detta inte görs innebär det en risk för både människor och utrustning.
 	   Elmodeller är tysta, och det kan räcka med att någon råkar komma åt gas-spaken för att motorn startar oväntat.
@@ -128,57 +130,63 @@
     <p>En bra throttle cut-lösning kontrollerar dessutom att gaspaken står på noll innan motorn kan aktiveras.
 	   Det innebär att motorreglaget måste vara i nolläge när du slår på ”motor på” – annars förblir motorn spärrad.</p>
 
+    <h3 class="h4">Throttle cut - Exempel - Spektrum NX & AirWave</h3>
     <p>
-    <h3>Throttle cut - Exempel - Spektrum NX & AirWave</h3>
-	Det finns redan en färdig inställning för throttle cut. Se bilderna nedan.
-	Här används knappen "H" som throttle cut, när knappen är från dig är "motorn på" och mot dig "motorn av".
-	<br><i>Meny -> Throttle Cut
-	<br>Kolla att fältet "01" efter "Switch H" har vit bakgrund på "0" och svart på "1". (Ändra bakgrund genom ändra knappen H till positionen som ska ändras och tryck sedan på hjulet för ändra)
-	</i>
-    <br><img src="radio_setup/spektrum/th_cut_1.bmp" width="200" alt="Th cut bild 1">
-    <img src="radio_setup/spektrum/th_cut_2.bmp" width="200" alt="Th cut bild 2">
+	  Det finns redan en färdig inställning för throttle cut. Se bilderna nedan.
+	  Här används knappen "H" som throttle cut, när knappen är från dig är "motorn på" och mot dig "motorn av".
+	  <br><br><i>Meny -> Throttle Cut
+	    <br>Kolla att fältet "01" efter "Switch H" har vit bakgrund på "0" och svart på "1". (Ändra bakgrund genom ändra knappen H till positionen som ska ändras och tryck sedan på hjulet för ändra)
+	  </i>
+      <br><img src="radio_setup/spektrum/th_cut_1.bmp" width="200" alt="Th cut bild 1">
+      <img src="radio_setup/spektrum/th_cut_2.bmp" width="200" alt="Th cut bild 2">
     </p>
 	
 	<p>
-    Vill du ha tal som berättar när motor on/off knappen ändras, lägg in följande.
-	<br><i>Meny -> Audio Event -> Switch Changes -> Add New Sound Event.
+      <br>Vill du ha tal som berättar när motor on/off knappen ändras, lägg in följande.
+	  <br><br><i>Meny -> Audio Event -> Switch Changes -> Add New Sound Event.
 	   <br>Välj knapp "H" och sedan ljudet "Motorn On" och sedan "Motorn off"
-	</i>
-    <br><img src="radio_setup/spektrum/th_cut_3.bmp" width="200" alt="Th cut bild 3">
-    <img src="radio_setup/spektrum/th_cut_4.bmp" width="200" alt="Th cut bild 4">
-    <img src="radio_setup/spektrum/th_cut_5.bmp" width="200" alt="Th cut bild 5">
+	  </i>
+      <br><img src="radio_setup/spektrum/th_cut_3.bmp" width="200" alt="Th cut bild 3">
+      <img src="radio_setup/spektrum/th_cut_4.bmp" width="200" alt="Th cut bild 4">
+      <img src="radio_setup/spektrum/th_cut_5.bmp" width="200" alt="Th cut bild 5">
     </p>
 	
-    <h3>Throttle cut - Exempel - Flera märken med EdgeTX</h3>
+    <h3 class="h4">Throttle cut - Exempel - Flera märken med EdgeTX</h3>
 
     <p>	
-	I detta exempel används en 6-positionsbrytare för att välja vilket läge modellen ska vara i.
+	  I detta exempel används en 6-positionsbrytare för att välja vilket läge modellen ska vara i.
+    </p>
 	<ul>
-    <li>Position 1 - Motor av</li>
-	<li>Position 2 - Motor på - Motorn kan endast starta om gasen står under −95 %.</li>
-    <li>Position 3 - Pit mode - Motor av samt nollställer timer.</li>
+      <li>Position 1 - Motor av</li>
+	  <li>Position 2 - Motor på - Motorn kan endast starta om gasen står under −95 %.</li>
+      <li>Position 3 - Pit mode - Motor av samt nollställer timer.</li>
     </ul>
-    Det innebär att du använder position 1 och 2 för att slå av och på motorn, och väljer position 3 när du har bytt batteri.
-    I exemplet används även röstmeddelanden kopplade till 6-positionsbrytaren för att bekräfta vilket läge som är valt.
+	<p>
+      Det innebär att du använder position 1 och 2 för att slå av och på motorn, och väljer position 3 när du har bytt batteri.
+      I exemplet används även röstmeddelanden kopplade till 6-positionsbrytaren för att bekräfta vilket läge som är valt.
+	</p>
+	
+	<p>
+	  Först skapas två "Logiska Switchar":
+	</p>
+	<ul>
+	  <li>L01 känner av gasreglaget i kombination med position 2 på 6-positionsbrytaren.</li>
+	  <li>L02 ”låser” värdet från L01 så att gasreglaget kan användas efter nollställning, och blockerar samtidigt motorn om brytaren inte står i position 2 (!6POS2).</li>
+    </ul>
+	<p>
+      <img src="radio_setup/edgetx/th_cut_1.bmp" width="400" alt="Th cut bild 1">
     </p>
 	
 	<p>
-	Först skapas två "Logiska Switchar":
+	  Därefter läggs "Special Functions" in:
+	</p>
 	<ul>
-	<li>L01 känner av gasreglaget i kombination med position 2 på 6-positionsbrytaren.</li>
-	<li>L02 ”låser” värdet från L01 så att gasreglaget kan användas efter nollställning, och blockerar samtidigt motorn om brytaren inte står i position 2 (!6POS2).</li>
-    </ul>
-    <img src="radio_setup/edgetx/th_cut_1.bmp" width="400" alt="Th cut bild 1">
-    </p>
-	
-	<p>
-	Därefter läggs "Special Functions" in:
-	<ul>
-	<li>SF1 gör en override på throttle-kanalen (CH3) när L02 inte är aktiv (!L02).</li>
-	<li>SF2–SF4 spelar upp röstmeddelanden för vald position.</li>
-	<li>SF5 nollställer timern när Pit mode är aktivt.</li>
+	  <li>SF1 gör en override på throttle-kanalen (CH3) när L02 inte är aktiv (!L02).</li>
+	  <li>SF2–SF4 spelar upp röstmeddelanden för vald position.</li>
+	  <li>SF5 nollställer timern när Pit mode är aktivt.</li>
 	</ul>
-    <img src="radio_setup/edgetx/th_cut_2.bmp" width="400" alt="Th cut bild 2">
+	<p>
+      <img src="radio_setup/edgetx/th_cut_2.bmp" width="400" alt="Th cut bild 2">
     </p>
 	
   </main>
