@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Textformat – Exempel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Meny -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand p-0" href="../index.html">Hem</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Innehåll -->
+  <main class="container py-4">
+
+    <h1 class="mb-3">Exempel på textformatering</h1>
+    <p>
+      Här visas olika typer av textformatering du kan använda på din statiska hemsida.
+    </p>
+
+    <hr>
+
+    <h2>Rubriker</h2>
+    <h1>Rubrik H1</h1>
+    <h2>Rubrik H2</h2>
+    <h3>Rubrik H3</h3>
+    <h4>Rubrik H4</h4>
+    <h5>Rubrik H5</h5>
+
+    <hr>
+
+    <h2>Grundläggande textformat</h2>
+    <p>Detta är en vanlig brödtext.</p>
+    <p><strong>Fet text</strong> – används för att betona något viktigt.</p>
+    <p><em>Kursiv text</em> – ofta för citat eller speciella ord.</p>
+    <p><u>Understruken text</u> – använd sparsamt.</p>
+    <p><mark>Markerad text</mark> – för att lyfta fram något.</p>
+    <p><span style="color: red;">Röd text</span> – går bra att styla med inline CSS.</p>
+
+    <hr>
+
+    <h2>Listor</h2>
+
+    <h4>Oordnad lista</h4>
+    <ul>
+      <li>Äpple</li>
+      <li>Päron</li>
+      <li>Banan</li>
+    </ul>
+
+    <h4>Ordnad lista</h4>
+    <ol>
+      <li>Första steget</li>
+      <li>Andra steget</li>
+      <li>Tredje steget</li>
+    </ol>
+
+    <hr>
+
+    <h2>Citat & blockquote</h2>
+    <blockquote class="blockquote">
+      “Detta är ett exempel på ett blockcitat med Bootstrap-stil.”
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Känd person i <cite title="Källa">någon källa</cite>
+    </figcaption>
+
+    <hr>
+
+    <h2>Tabell</h2>
+    <table class="table table-striped table-bordered w-75">
+      <thead class="table-dark">
+        <tr>
+          <th>Namn</th>
+          <th>Ålder</th>
+          <th>Roll</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Anna</td>
+          <td>32</td>
+          <td>Utvecklare</td>
+        </tr>
+        <tr>
+          <td>Erik</td>
+          <td>41</td>
+          <td>Designer</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Kodblock</h2>
+    <p>Nedan visas formaterad kod:</p>
+
+    <pre class="bg-light p-3 rounded"><code>
+// Exempel på JavaScript
+function hej() {
+  console.log("Hej världen!");
+}
+hej();
+    </code></pre>
+
+    <hr>
+
+    <h2>Bootstrap alert-block</h2>
+    <div class="alert alert-primary">Detta är ett informationsmeddelande.</div>
+    <div class="alert alert-success">Detta är ett lyckat meddelande.</div>
+    <div class="alert alert-warning">Varning! Något behöver uppmärksammas.</div>
+    <div class="alert alert-danger">Ett fel har inträffat.</div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    © 2025 Aktivt Modellflyg
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
