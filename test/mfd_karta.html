@@ -119,16 +119,21 @@
   <main class="container py-4">
     <h1 class="h2">Klubbar som är aktiva under Modellflygets dag</h1>
 
+    <p>
+	  Klicka på klubben i listan så zoomar kartan dit.
+	  Klicka på klubb i kartan så finns mer information.
+	</p>
+	
 	<div class="container-fluid mt-3">
 		<div class="row">
 			<div class="col-md-4 order-2 order-md-1">
-				<div class="list-group" id="klubb-lista" style="max-height: 500px; overflow-y: auto;">
-					<div class="list-group-item">Klubbar</div>
+				<div class="list-group" id="klubb-lista" style="max-height: 600px; overflow-y: auto;">
+					<div class="list-group-item">Landskap - Klubb</div>
 				</div>
 			</div>
 
 			<div class="col-md-8 order-1 order-md-2 mb-3">
-				<div id="map" style="height: 500px; border-radius: 8px;"></div>
+				<div id="map" style="height: 600px; border-radius: 8px;"></div>
 			</div>
 		</div>
 	</div>
@@ -141,7 +146,7 @@
 
 	<hr>
 	<p>
-	  Deltar din klubb under Modellflygets dag men är inte med på kartan ? <a href="../test/mfd_registrera.html">Registrera din klubb här.</a>
+	  Deltar din klubb under Modellflygets dag men saknas på kartan ? <a href="../test/mfd_registrera.html">Registrera din klubb här.</a>
 	</p>
 	
   </main>
@@ -178,7 +183,13 @@
 						if (row.Lat && row.Lng) {
 							// Skapa markör på kartan
 							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
-							marker.bindPopup(`<b>${row.Namn}</b><br>Klockan: ${row.Tid}<br>Hemsida: ${row.Web}`);
+							marker.bindPopup(`
+							  <b>${row.Namn}</b>
+							  <br>Klockan: ${row.Tid}
+							  <br>Hemsida: ${row.Web} <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
+							`);
+
+
 
 							// Skapa en klickbar rad i Bootstrap-listan
 							var listItem = document.createElement('button');
