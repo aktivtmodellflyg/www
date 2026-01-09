@@ -120,8 +120,9 @@
     <h1 class="h2">Klubbar som är aktiva under Modellflygets dag</h1>
 
     <p>
-	  Klicka på en klubb i listan för att zooma dit.
-	  <br>Klicka på en klubb på kartan för mer information.
+	  Klicka på en klubb i listan för att zooma dit. <i>Listan är sorterad efter Landskap.</i>
+	  <br>Eller zooma och dra i kartan.
+	  <br>Klicka på en klubb i kartan för mer information.
 	</p>
 	
 	<div class="container-fluid mt-3">
@@ -190,7 +191,7 @@
 							// Skapa en klickbar rad i Bootstrap-listan
 							var listItem = document.createElement('button');
 							listItem.className = 'list-group-item list-group-item-action';
-							listItem.innerHTML = `${row.Landskap}<b> ${row.Namn}</b>`;
+							listItem.innerHTML = `${row.Landskap} - <b>${row.Namn}</b>`;
 							
 							// När man klickar i listan: Zooma in på kartan och öppna popupen
 							listItem.onclick = function() {
