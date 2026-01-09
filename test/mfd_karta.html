@@ -15,7 +15,7 @@
    <style> #map { height: 400px; background: #eee; } </style>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-
+ 	
 </head>
 <body>
 
@@ -121,15 +121,12 @@
 
 	<div class="container-fluid mt-3">
 		<div class="row">
-			<!-- Lista med information (tar 4 delar av 12 på stora skärmar) -->
 			<div class="col-md-4 order-2 order-md-1">
-				<div class="list-group" id="klubb-lista">
-					<!-- Här fylls listan på automatiskt av JavaScriptet -->
-					<div class="list-group-item">Laddar klubbar...</div>
+				<div class="list-group" id="klubb-lista" style="max-height: 500px; overflow-y: auto;">
+					<div class="list-group-item">Klubbar</div>
 				</div>
 			</div>
 
-			<!-- Kartan (tar 8 delar av 12 på stora skärmar) -->
 			<div class="col-md-8 order-1 order-md-2 mb-3">
 				<div id="map" style="height: 500px; border-radius: 8px;"></div>
 			</div>
@@ -181,12 +178,12 @@
 						if (row.Lat && row.Lng) {
 							// Skapa markör på kartan
 							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
-							marker.bindPopup(`<b>${row.Namn}</b><br>Klockan: ${row.Tid}`);
+							marker.bindPopup(`<b>${row.Namn}</b><br>Klockan: ${row.Tid}<br>Hemsida: ${row.Web}`);
 
 							// Skapa en klickbar rad i Bootstrap-listan
 							var listItem = document.createElement('button');
 							listItem.className = 'list-group-item list-group-item-action';
-							listItem.innerHTML = `<h6>${row.Namn}</h6><small>${row.Tid}</small>`;
+							listItem.innerHTML = `${row.Landskap}<b> ${row.Namn}</b>`;
 							
 							// När man klickar i listan: Zooma in på kartan och öppna popupen
 							listItem.onclick = function() {
