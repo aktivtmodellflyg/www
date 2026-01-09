@@ -120,15 +120,15 @@
     <h1 class="h2">Klubbar som är aktiva under Modellflygets dag</h1>
 
     <p>
-	  Klicka på klubben i listan så zoomar kartan dit.
-	  Klicka på klubb i kartan så finns mer information.
+	  Klicka på en klubb i listan för att zooma dit.
+	  <br>Klicka på en klubb på kartan för mer information.
 	</p>
 	
 	<div class="container-fluid mt-3">
 		<div class="row">
 			<div class="col-md-4 order-2 order-md-1">
 				<div class="list-group" id="klubb-lista" style="max-height: 600px; overflow-y: auto;">
-					<div class="list-group-item">Landskap - Klubb</div>
+					<div class="list-group-item"><b>Landskap - Klubb</b></div>
 				</div>
 			</div>
 
@@ -186,7 +186,7 @@
 							marker.bindPopup(`
 							  <b>${row.Namn}</b>
 							  <br>Klockan: ${row.Tid}
-							  <br>Hemsida: ${row.Web} <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
+							  <br>Hemsida: <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
 							`);
 
 
