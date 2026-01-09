@@ -120,7 +120,7 @@
 	<h2 class="h3">Registrering - För att synas att man deltar</h2>
 	<p>
 	  1. Zooma in och klicka på kartan dit besökare skall köra.
-	  <br>2. När du har klickat får du en popup-ruta. Klicka på registreringslänken och fyll i formuläret. (Måste göras från ett google konto)
+	  <br>2. När du har klickat får du en popup-ruta. Klicka på registreringslänken och fyll i formuläret (måste göras från ett Google konto).
 	  <br>3. Efter några minuter skall er klubb synas på kartan.
 	</p>
 
@@ -160,9 +160,6 @@
 		var map = L.map('map').setView([61.0, 15.0], 5);
 			
 		document.addEventListener("DOMContentLoaded", function () {
-			// 1. Skapa kartan (Centrerad över Sverige)
-
-			// 2. Lägg till kartbild (OpenStreetMap)
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; OpenStreetMap bidragsgivare'
 			}).addTo(map);

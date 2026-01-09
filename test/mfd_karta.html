@@ -161,16 +161,12 @@
 	 
 	<script>
 	    document.addEventListener("DOMContentLoaded", function () {
-			// 1. Skapa kartan (Centrerad över Sverige)
 			var map = L.map('map').setView([61.0, 15.0], 5);
 
-			// 2. Lägg till kartbild (OpenStreetMap)
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; OpenStreetMap bidragsgivare'
 			}).addTo(map);
-			
-			/*L.marker([55.82, 13.32]).addTo(map).bindPopup('Eslöv');*/
-			
+		
 			var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR49Lc3ZNULKPGSWtUjNV-0_7sLtNedDKltps6c8lND0Tmg9AKJYlRDjq-pLK_KR3AZFNyjqIO0eJ3z/pub?gid=499287765&single=true&output=csv';
 
 			Papa.parse(csvUrl, {
@@ -185,8 +181,8 @@
 							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
 							marker.bindPopup(`
 							  <b>${row.Namn}</b>
-							  <br>Klockan: ${row.Tid}
-							  <br>Hemsida: <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
+							  <br><b>Klockan:</b> ${row.Tid}
+							  <br><b>Hemsida:</b> <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
 							`);
 
 
