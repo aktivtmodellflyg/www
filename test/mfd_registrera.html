@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modellflygets dag - Registrering</title>
+  <link rel="canonical" href="">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <style> #map { height: 400px; background: #eee; } </style>
+
+</head>
+<body>
+
+  <!-- Meny -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
+    <div class="container">
+      <a class="navbar-brand p-0" href="../index.html"><img src="../images/amf_90x90.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+		  
+          <li class="nav-item"><a class="nav-link" href="../mfd/mfd.html">
+		  Modellflygets dag
+		  </a></li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modellflyg
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" href="../mf/mf.html">Detta är modellflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/unga.html">Unga</a>
+            <a class="dropdown-item" href="../mf/avancera.html">Avancera</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/foto_event.html">Foto Tema & event</a>
+            <a class="dropdown-item" href="../mf/foto_bygg.html">Foto Bygg & teknik</a>
+            <a class="dropdown-item" href="../mf/foto_modell.html">Foto Modeller</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Börja
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="../borja/borja.html">Hur man börjar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/radio.html">Radio</a>
+            <a class="dropdown-item" href="../borja/laddare.html">Laddare</a>
+            <a class="dropdown-item" href="../borja/modell_wing.html">Flygplan</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/butiker.html">Butiker</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Utbildning
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="../utb/regler.html">Regler</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/prova.html">Prova spaka</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
+            <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
+            <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/tips.html">Byggtips</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/utb_links.html">Länkar</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Uppdatera
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown4">
+            <a class="dropdown-item" href="../update/update.html">Intro</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../update/spektrum.html">Spektrum</a>
+            <a class="dropdown-item" href="../update/futaba.html">Futaba</a>
+            <a class="dropdown-item" href="../update/frsky.html">FrSky med Ethos</a>
+            <a class="dropdown-item" href="../update/radiomaster.html">EdgeTX, ELRS & MM - RadioMaster</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  Ladda ned
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown5">
+            <a class="dropdown-item" href="../download/dl_mfd.html">För klubbar</a>
+            <a class="dropdown-item" href="../download/dl_pilot.html">För piloter</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../download/dl_links.html">Länkar</a>
+          </div>
+          </li>
+		  
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Innehåll -->
+  <main class="container py-4">
+    <h1 class="h2">Modellflygets dag för klubbar och arrangörer</h1>
+	
+	<h2 class="h3">Registrering - För att synas att man deltar</h2>
+	<p>
+	  1. Börja med att zooma in och klicka på kartan vart besökare skall köra.
+	  <br>2. När du har klickat får du en popup-rutan med en registreringslänk. Klicka på den och fyll i formuläret. (Måste göras från ett google konto)
+	  <br>3. Efter någon minut skall er aktivitet synas på kartan.
+	</p>
+
+	<div class="container-fluid mt-3">
+	  <div id="map" style="height: 500px; border-radius: 8px;"></div>
+    </div>
+	
+    <p>
+	  <i>Kartan fungerade inte för mig. Jag kan GPS koordinaterna och går vidare manuellt.</i>
+      <a id="formURL" href="https://docs.google.com/forms/d/e/1FAIpQLSdaQqoCmabO5b1xHpKw-UADu_Mux_JqiJfsmPDw5tdsAmfqFw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Manuell registrering</a> (Öppnas i ett nytt fönster)
+	</p>
+
+	
+	<h2 class="h3">Facebook - Modellflygets dag</h2>
+	<p>
+	  Det finns en grupp där ni arrangörer och klubbar kan <b>dela idéer</b> och erfarenheter.
+	  <br><b>Facebook:</b>
+	  <a href="https://www.facebook.com/groups/modellflygetsdag" target="_blank" rel="noopener noreferrer">https://www.facebook.com/groups/modellflygetsdag</a>
+	</p>
+
+    <hr>
+	<p>
+      <a href="../test/mfd_karta.html">Tillbaka till kartan</a>
+	</p>
+	
+  </main>
+
+  <footer class="bg-secondary text-white text-center py-3 mt-4">
+    Vi ska ha kul tillsammans - En aktiv hobby i luften under RCFF, SMFF eller med drönarkort
+  </footer>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	 crossorigin=""></script>
+	 
+	<script>
+		var map = L.map('map').setView([61.0, 15.0], 5);
+			
+		document.addEventListener("DOMContentLoaded", function () {
+			// 1. Skapa kartan (Centrerad över Sverige)
+
+			// 2. Lägg till kartbild (OpenStreetMap)
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; OpenStreetMap bidragsgivare'
+			}).addTo(map);
+			
+		    map.on('click', onMapClick);
+		});
+		
+		
+		function onMapClick(e) {
+		  var lat = e.latlng.lat.toFixed(5);
+		  var lng = e.latlng.lng.toFixed(5);
+		  
+		  var formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdaQqoCmabO5b1xHpKw-UADu_Mux_JqiJfsmPDw5tdsAmfqFw/viewform?usp=pp_url&entry.405883927=" +lat + "&entry.475131248=" + lng;
+
+ 		  var popupContent = "<b>Koordinater:</b> " + lat + ", " + lng + "<br><br>" +
+                       "<a href='" + formUrl + "' target='_blank'>Registrera klubbaktivitet här</a><br>(Öppnas i ett nytt fönster)";
+    
+          L.popup().setLatLng(e.latlng).setContent(popupContent).openOn(map);
+        }
+	</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

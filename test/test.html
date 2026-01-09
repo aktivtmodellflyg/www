@@ -9,9 +9,12 @@
   <link rel="stylesheet" href="../css/style.css">
   
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="unpkg.com" />
-  <style> #map { height: 400px; background: #eee; } </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+   <style> #map { height: 400px; background: #eee; } </style>
  
+ 	 
 </head>
 <body>
 
@@ -139,10 +142,10 @@
     Vi ska ha kul tillsammans - En aktiv hobby i luften under RCFF, SMFF eller med drönarkort
   </footer>
 
-	<!-- Script: Leaflet, PapaParse (för CSV) -->
-	<script src="unpkg.com"></script>
-	<!-- <script src="cdnjs.cloudflare.com"></script> -->
-
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+	 
 	<script>
 	    document.addEventListener("DOMContentLoaded", function () {
 			// 1. Skapa kartan (Centrerad över Sverige)
