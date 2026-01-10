@@ -3,10 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modellflygets dag - Listan</title>
-  <link rel="canonical" href="">
+  <title>Modellflygets dag - Registrering</title>
+  <link rel="canonical" href="https://aktivtmodellflyg.se/mfd/mfd_registrera.html">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin="">
+  <style> #map { height: 400px; background: #eee; } </style>
+
 </head>
 <body>
 
@@ -108,19 +115,91 @@
 
   <!-- Innehåll -->
   <main class="container py-4">
-    <h1>Klubbar som är aktiva under Modellflygets dag</h1>
+    <h1 class="h2">Modellflygets dag för klubbar och arrangörer</h1>
 	
-	<i class="amf">Detta är bara för test av en backuplösning om vi inte hittar en bättre lösning att hantera detta. <a href="../test/mfd_reg.html">Registrera din klubb här.</a></i>
+	<p>
+	  Denna sida samlar material och information som kan vara till hjälp inför ert arrangemang av Modellflygets dag.
+	</p>
+	
+	<h2 class="h3">Registrering i besökskartan - för att synas som deltagande klubb</h2>
+	<p>Zooma in och klicka på registreringskartan nedan för att markera var besökare ska köra.
+	</p>
+	<ol>
+	  <li>Klicka på kartan så visas en popup-ruta.</li>
+	  <li>Klicka på registreringslänken och fyll i formuläret <i>(gratis men måste göras från ett Google konto)</i>. <i class="test-only amf" >Registrerar du något på testsidan syns det på den riktiga sidan också (samma databas). Lägg till ordet <b>Test</b> före klubbnamnet om det inte är en riktig registrering.</i></li>
+	  <li>Efter några minuter ska er klubb synas på besökskartan <i>(registreringskartan nedan uppdateras inte)</i>.</li>
+	  <li>Kontrollera att er länk fungerar genom att klicka på er klubb i besökskartan och därefter på länken till er hemsida.</li> 
+	</ol>
+	
+	
+	<div class="container-fluid mt-3">
+	  <div id="map" style="height: 500px; border-radius: 8px;"></div>
+    </div>
 
-    <div class="ratio ratio-16x9">
-	  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS9wupcDuL0INFl2gA0fbId9izNIL0_wrSQ_nH28sgbAr3XLSxpBYsPGaZzOrOYFQXDqvk3kJXA5VCL/pubhtml?gid=1224491575&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-	</div>
+    <br>	
+	<h3 class="h5">Problem - Support - Hjälp</h3>
+    <ul>
+	  <li><b>Registreringskartan fungerade inte</b> för mig. Jag känner till GPS koordinaterna och vill registrera manuellt. <a id="formURL" href="https://docs.google.com/forms/d/e/1FAIpQLSdaQqoCmabO5b1xHpKw-UADu_Mux_JqiJfsmPDw5tdsAmfqFw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Manuell registrering</a> (Öppnas i ett nytt fönster)</li>
+      <li>Jag skrev in <b>fel uppgifter</b> i formuläret. Du har fått ett e-postmeddelande med en länk där du kan ändra dina uppgifter.</li>
+	  <li>Jag har markerat <b>fel plats</b> på kartan. Klicka på registreringskartan ovan igen och skriv ned koordinaterna (klicka <b>inte</b> på registreringslänken). Ändra sedan koordinaterna via länken i e-postmeddelandet.</li>
+	  <li>Vi <b>har ingen hemsida</b>. Om ni använder annat media, t.ex. Facbook, kan ni agne den URL:en istället. Exempel: https://www.facebook.com/EslovsMFK </li>
+      <li>Vi vill <b>visa mer information</b> om dagens program och aktiviteter. Lägg informationen på er egen hemsida och ändra URL:en i formuläret så länken pekar direkt till den sidan. Det gör det enklare för besökare att hitta rätt information.</li>
+	</ul>
+
+	<h2 class="h3">Inför dagen</h2>
+	<ul>
+	  <li>Gå gärna med <b>Facebook grupp för klubbar och arrangörer</b> där ni kan <b>dela idéer</b> och erfarenheter. <a href="https://www.facebook.com/groups/modellflygetsdag" target="_blank" rel="noopener noreferrer">https://www.facebook.com/groups/modellflygetsdag</a> (Öppnas i nytt fönster)</li>
+	  <li>Glöm inte att det <b>finns material</b> som kan användas i samband med Modellflygets dag. <a href="../download/dl_mfd.html">Gå till 'Ladda ned - För klubbar'</a></li>
+	  <li>Ta gärna lite foton och under dagen. Om <b>arrangemanget blev lyckat</b> kanske ni vill dela bild och en text på Aktivt Modellflygs hemsida. Visa upp er och locka fler klubbar till nästa år.</li>
+	  
+	  <li>Om ni <b>annonserar</b> Modellflygets dag, får ni gärna även ta med länken <b>https://aktivtmodellflyg.se</b> eller <b>https://aktivtmodellflyg.se/mfd/mfd.html</b>.
+			<br>Då kan personer som ser er annonsering men bor för långt bort enkelt hitta ett annat arrangemang i närheten.
+			En ny medlem – oavsett var i landet – är en <b>vinst för hela vår hobby</b>.
+	  </li>
+	</ul>
+	
+
+    <hr>
+	<p>
+      <a href="mfd_karta.html">Tillbaka till 'besökskartan'</a>
+	</p>
+	
+	
 	
   </main>
 
   <footer class="bg-secondary text-white text-center py-3 mt-4">
     Vi ska ha kul tillsammans - En aktiv hobby i luften under RCFF, SMFF eller med drönarkort
   </footer>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	 crossorigin=""></script>
+	 
+	<script>
+		var map = L.map('map').setView([61.0, 15.0], 5);
+			
+		document.addEventListener("DOMContentLoaded", function () {
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; OpenStreetMap bidragsgivare'
+			}).addTo(map);
+			
+		    map.on('click', onMapClick);
+		});
+		
+		
+		function onMapClick(e) {
+		  var lat = e.latlng.lat.toFixed(5);
+		  var lng = e.latlng.lng.toFixed(5);
+		  
+		  var formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdaQqoCmabO5b1xHpKw-UADu_Mux_JqiJfsmPDw5tdsAmfqFw/viewform?usp=pp_url&entry.405883927=" +lat + "&entry.475131248=" + lng;
+
+ 		  var popupContent = "<b>Koordinater:</b> " + lat + ", " + lng + "<br><br>" +
+                       "<a href='" + formUrl + "' target='_blank'>Registrera klubbaktivitet här</a><br>(Öppnas i ett nytt fönster)";
+    
+          L.popup().setLatLng(e.latlng).setContent(popupContent).openOn(map);
+        }
+	</script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
