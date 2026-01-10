@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modellflygets dag - Listan</title>
+  <title>Modellflygets dag - Kartan</title>
   <link rel="canonical" href="">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
@@ -117,11 +117,10 @@
 
   <!-- Innehåll -->
   <main class="container py-4">
-    <h1 class="h2">Klubbar som är aktiva under Modellflygets dag</h1>
+    <h1 class="h2">Klubbar som har aktivitet under Modellflygets dag - Besökskartan</h1>
 
     <p>
-	  Klicka på en klubb i listan för att zooma dit. <i>Listan är sorterad efter Landskap.</i>
-	  <br>Eller zooma och dra i kartan.
+	  Klicka på en klubb i listan för att zooma dit <i>(Listan är sorterad efter Landskap)</i> eller zooma och dra i kartan.
 	  <br>Klicka på en klubb i kartan för mer information.
 	</p>
 	
@@ -129,7 +128,7 @@
 		<div class="row">
 			<div class="col-md-4 order-2 order-md-1">
 				<div class="list-group" id="klubb-lista" style="max-height: 600px; overflow-y: auto;">
-					<div class="list-group-item"><b>Landskap - Klubb</b></div>
+					<div class="list-group-item"><i><small>Landskap</small> <b>Klubbnamn</b></i></div>
 				</div>
 			</div>
 
@@ -191,7 +190,7 @@
 							// Skapa en klickbar rad i Bootstrap-listan
 							var listItem = document.createElement('button');
 							listItem.className = 'list-group-item list-group-item-action';
-							listItem.innerHTML = `${row.Landskap} - <b>${row.Namn}</b>`;
+							listItem.innerHTML = `<small>${row.Landskap}</small> <b>${row.Namn}</b>`;
 							
 							// När man klickar i listan: Zooma in på kartan och öppna popupen
 							listItem.onclick = function() {
