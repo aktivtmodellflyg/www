@@ -183,7 +183,7 @@
 					var data = results.data;
 
 					data.forEach(function(row) {
-						if (row.Lat && row.Lng) {
+						if (row.Lat && row.Lng && !row.Namn.startsWith('!DEL')) {
 							// Skapa markör på kartan
 							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
 							marker.bindPopup(`
