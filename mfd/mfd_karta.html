@@ -187,11 +187,6 @@
 						if (row.Lat && row.Lng && row.Namn && row.Landskap && !row.Namn.startsWith('!DEL')) {
 							// Skapa markör på kartan
 							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
-							marker.bindPopup(`
-							  <b>${row.Namn}</b>
-							  <br><b>Klockan:</b> ${row.Tid}
-							  <br><b>Hemsida:</b> <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
-							`);
 
 
 
@@ -201,8 +196,21 @@
 							
 							if( row.Namn.startsWith('Prel')) {
 							  listItem.innerHTML = `<small>${row.Landskap}</small> <i class="amf">${row.Namn}</i>`;
+
+ 							  marker.bindPopup(`
+								  <i class="amf">${row.Namn}</i>
+								  <br><b>Klockan:</b> ${row.Tid}
+								  <br><b>Hemsida:</b> <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
+							  `);
 							} else {
 							  listItem.innerHTML = `<small>${row.Landskap}</small> <b>${row.Namn}</b>`;
+
+ 							  marker.bindPopup(`
+								  <b>${row.Namn}</b>
+								  <br><b>Klockan:</b> ${row.Tid}
+								  <br><b>Hemsida:</b> <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
+							  `);
+
 							}
 							
 							// När man klickar i listan: Zooma in på kartan och öppna popupen
