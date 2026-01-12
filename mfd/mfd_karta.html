@@ -184,7 +184,7 @@
 					var data = results.data;
 
 					data.forEach(function(row) {
-						if (row.Lat && row.Lng && !row.Namn.startsWith('!DEL')) {
+						if (row.Lat && row.Lng && row.Namn && row.Landskap && !row.Namn.startsWith('!DEL')) {
 							// Skapa markör på kartan
 							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
 							marker.bindPopup(`
@@ -199,9 +199,9 @@
 							var listItem = document.createElement('button');
 							listItem.className = 'list-group-item list-group-item-action';
 							
-							if( row.Namn.startsWith('Prel'){
+							if( row.Namn.startsWith('Prel')){
 							  listItem.innerHTML = `<small>${row.Landskap}</small> <i>${row.Namn}</i>`;
-							}else{
+							} else {
 							  listItem.innerHTML = `<small>${row.Landskap}</small> <b>${row.Namn}</b>`;
 							}
 							
