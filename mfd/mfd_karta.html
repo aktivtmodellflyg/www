@@ -198,7 +198,12 @@
 							// Skapa en klickbar rad i Bootstrap-listan
 							var listItem = document.createElement('button');
 							listItem.className = 'list-group-item list-group-item-action';
-							listItem.innerHTML = `<small>${row.Landskap}</small> <b>${row.Namn}</b>`;
+							
+							if( row.Namn.startsWith('Prel'){
+							  listItem.innerHTML = `<small>${row.Landskap}</small> <i>${row.Namn}</i>`;
+							}else{
+							  listItem.innerHTML = `<small>${row.Landskap}</small> <b>${row.Namn}</b>`;
+							}
 							
 							// När man klickar i listan: Zooma in på kartan och öppna popupen
 							listItem.onclick = function() {
