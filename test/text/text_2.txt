@@ -1,7 +1,0 @@
-<b>Hej</b>
-<p>
-Fungerar detta ?
-</p>
-<p>
-Nästa stycke
-</p>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Text Mapp</title>
-  <link rel="canonical" href="">
+  <title>Klubb</title>
+  <link rel="canonical" href="https://aktivtmodellflyg.se/mfd/mfd_klubb.html">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -108,11 +108,20 @@
 
   <!-- Innehåll -->
   <main class="container py-3">
-    <h1 class=h2>Text mapp</h1>
-
-	<div class="container mt-3">
-      <span id="text_info">Texten</span>  
-    </div>
+    <h1 class="h2">Klubbsupport för Modellflygets dag.</h1>
+	<p>
+	  Denna sida fungerar som en tillfällig informationsplats för en klubb inför Modellflygets dag som inte är synlig plats på internet.
+	  Informationen nedan kommer från klubben själv.
+	</p>
+	
+    <hr>
+    <span id="text_info">
+	  För att lägga in text här måste du kontakta Aktivt Modellflyg via <b>E-post</b>.
+	  <br>Skriv ihop en <b>enklare text</b> utan någon avancerad formatering bold/kraftig text, stycken är ok.
+	  <br>Sedan får du <b>tillbaka</b> en <b>https adress</b> som ligger på Aktivt Modellflyg hemsida.
+	  <br>Denna https adress använder ni sedan när <b>ni registrerar</b> er på kartan.
+	  <br><br><i>Aktivt modellflyg kommer inte administrera hemsidor åt klubbar utan detta är bara till hjälp för denna dagen om klubben inte har andra möjlighet.</i>
+	</span>  
 
   </main>
 
@@ -133,7 +142,7 @@
     document.addEventListener("DOMContentLoaded", function () {
 	  if( textID ){
 	  
-	    const filnamn = "text/text_" + textID + ".txt";
+	    const filnamn = "klubb/klubb_" + textID + ".html";
 		
 		  fetch(filnamn)
 			.then(response => {
@@ -147,7 +156,7 @@
 			})
 			.catch(error => {
 				console.error('Fel:', error);
-				document.getElementById('text_info').innerHTML = "Ett fel uppstod: " + error.message;
+				document.getElementById('text_info').innerHTML = "Ett fel uppstod: " + error.message +"<br>Kontrollera att du använder rätt nummer i slutet av URL'en";
 			});
 	  }
     });
