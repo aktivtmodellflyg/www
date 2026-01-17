@@ -193,8 +193,8 @@
 							var listItem = document.createElement('button');
 							listItem.className = 'list-group-item list-group-item-action';
 							
-							if( row.Namn.startsWith('Prel')) {
-							  Namn = row.Namn.slice(4).trim();
+							if( row.Namn.startsWith('!Prel')) {
+							  Namn = row.Namn.slice(5).trim();
 							  
 							  listItem.innerHTML = `<small>${row.Landskap}</small> <i>Preliminärt</i> <b>${Namn}</b>`;
 
