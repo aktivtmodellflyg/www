@@ -192,7 +192,7 @@
 					data.forEach(function(row) {
 						if (row.Lat && row.Lng && row.Namn && row.Landskap && !row.Namn.startsWith('!DEL')) {
 							let Namn ="";
-							let IsGuest = false;
+							let isGuest = false;
 
 							// Skapa en klickbar rad i Bootstrap-listan
 							var listItem = document.createElement('button');
@@ -201,7 +201,7 @@
 
 							// Skapa markör på kartan
 							if( row.Namn.startsWith('!Gäst') ){
-							  IsGuest = true;
+							  isGuest = true;
 							  Namn = row.Namn.slice(5).trim();
 							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: guestClubIcon}).addTo(map);
 							}
