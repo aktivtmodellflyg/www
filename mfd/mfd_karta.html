@@ -187,7 +187,7 @@
 						if (row.Lat && row.Lng && row.Namn && row.Landskap && !row.Namn.startsWith('!DEL')) {
 							// Skapa markör på kartan
 							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
-
+							let Namn ="";
 
 
 							// Skapa en klickbar rad i Bootstrap-listan
@@ -195,10 +195,13 @@
 							listItem.className = 'list-group-item list-group-item-action';
 							
 							if( row.Namn.startsWith('Prel')) {
-							  listItem.innerHTML = `<small>${row.Landskap}</small> <i class="amf">${row.Namn}</i>`;
+							  Namn = row.Namn.slice(4).trim();
+							  
+							  listItem.innerHTML = `<small>${row.Landskap}</small> <i>Preliminärt</i> ${Namn}`;
 
  							  marker.bindPopup(`
-								  <i class="amf">${row.Namn}</i>
+								  <i class="amf">Preliminär anmälan</i>
+								  <br>${Namn}
 								  <br><b>Klockan:</b> ${row.Tid}
 								  <br><b>Hemsida:</b> <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
 							  `);
