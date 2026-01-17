@@ -122,7 +122,6 @@
     <p>
 	  Klicka på en klubb i listan för att zooma dit <i>(listan är sorterad efter landskap)</i> eller zooma och dra i kartan.
 	  <br>Klicka på en klubb i kartan för mer information.
-	  <span class="amf">Börjar klubbnamnet med <b>Prel</b> är det bara en preliminär registrering i väntan på beslut.</span>
 	</p>
 	
 	<div class="container-fluid mt-3">
@@ -197,7 +196,7 @@
 							if( row.Namn.startsWith('Prel')) {
 							  Namn = row.Namn.slice(4).trim();
 							  
-							  listItem.innerHTML = `<small>${row.Landskap}</small> <i>Preliminärt</i> ${Namn}`;
+							  listItem.innerHTML = `<small>${row.Landskap}</small> <i>Preliminärt</i> <b>${Namn}</b>`;
 
  							  marker.bindPopup(`
 								  <i class="amf">Preliminär anmälan</i>
