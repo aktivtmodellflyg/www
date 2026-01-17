@@ -170,6 +170,13 @@
 	    document.addEventListener("DOMContentLoaded", function () {
 			var map = L.map('map').setView([61.0, 15.0], 5);
 
+			const guestClubIcon = L.icon({
+			  iconUrl: 'images/marker_guest.svg',
+			  iconSize: [30, 42],
+			  iconAnchor: [15, 42],
+			  popupAnchor: [0, -38]
+			});
+			
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; OpenStreetMap bidragsgivare'
 			}).addTo(map);
@@ -185,7 +192,9 @@
 					data.forEach(function(row) {
 						if (row.Lat && row.Lng && row.Namn && row.Landskap && !row.Namn.startsWith('!DEL')) {
 							// Skapa markör på kartan
-							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
+							
+							//var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
+							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: guestClubIcon}).addTo(map);
 							let Namn ="";
 
 
@@ -212,7 +221,7 @@
 							  listItem.innerHTML = `<small>${row.Landskap}</small> <b>${Namn}</b>`;
 
  							  marker.bindPopup(`
-								  <i class="amf">Vi deltar som gästklubb på annat fält denna dag</i>
+								  <i class="amf">Vi deltar som gästklubb på detta fält denna dag</i>
 								  <br>${Namn}
 								  <br><b>Klockan:</b> ${row.Tid}
 								  <br><b>Hemsida:</b> <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
