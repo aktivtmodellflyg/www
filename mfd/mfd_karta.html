@@ -191,16 +191,24 @@
 
 					data.forEach(function(row) {
 						if (row.Lat && row.Lng && row.Namn && row.Landskap && !row.Namn.startsWith('!DEL')) {
-							// Skapa markör på kartan
-							
-							//var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
-							var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: guestClubIcon}).addTo(map);
 							let Namn ="";
-
+							let IsGuest = false;
 
 							// Skapa en klickbar rad i Bootstrap-listan
 							var listItem = document.createElement('button');
 							listItem.className = 'list-group-item list-group-item-action';
+							
+
+							// Skapa markör på kartan
+							if( row.Namn.startsWith('!Gäst') ){
+							  IsGuest = true;
+							  Namn = row.Namn.slice(5).trim();
+							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: guestClubIcon}).addTo(map);
+							}
+							else{
+							  var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
+							}
+
 							
 							if( row.Namn.startsWith('!Prel')) {
 							  Namn = row.Namn.slice(5).trim();
@@ -213,11 +221,8 @@
 								  <br><b>Klockan:</b> ${row.Tid}
 								  <br><b>Hemsida:</b> <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
 							  `);
-
 							}
-							else if( row.Namn.startsWith('!Gäst')) {
-							  Namn = row.Namn.slice(5).trim();
-							  
+							else if( isGuest ) {
 							  listItem.innerHTML = `<small>${row.Landskap}</small> <b>${Namn}</b>`;
 
  							  marker.bindPopup(`
@@ -226,8 +231,6 @@
 								  <br><b>Klockan:</b> ${row.Tid}
 								  <br><b>Hemsida:</b> <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
 							  `);
-							  
-							  
 							}
 							else {
 							  listItem.innerHTML = `<small>${row.Landskap}</small> <b>${row.Namn}</b>`;
