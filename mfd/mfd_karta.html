@@ -204,7 +204,23 @@
 								  <br><b>Klockan:</b> ${row.Tid}
 								  <br><b>Hemsida:</b> <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
 							  `);
-							} else {
+
+							}
+							else if( row.Namn.startsWith('!Gäst')) {
+							  Namn = row.Namn.slice(5).trim();
+							  
+							  listItem.innerHTML = `<small>${row.Landskap}</small> <b>${Namn}</b>`;
+
+ 							  marker.bindPopup(`
+								  <i class="amf">Vi deltar som gästklubb på annat fält denna dag</i>
+								  <br>${Namn}
+								  <br><b>Klockan:</b> ${row.Tid}
+								  <br><b>Hemsida:</b> <a href="${row.Web}" target="_blank" rel="noopener noreferrer">${row.Web}</a>
+							  `);
+							  
+							  
+							}
+							else {
 							  listItem.innerHTML = `<small>${row.Landskap}</small> <b>${row.Namn}</b>`;
 
  							  marker.bindPopup(`
