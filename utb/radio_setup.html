@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Knappar och funktioner på sändaren. Planera en lämplig layout.">
+  <title>Sändarens knappar och funktioner när man flyger</title>
+  <link rel="canonical" href="https://aktivtmodellflyg.se/utb/radio_setup.html">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Meny -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
+    <div class="container">
+      <a class="navbar-brand p-0" href="../index.html"><img src="../images/amf_90x90.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Innehåll -->
+  <main class="container py-4">
+    <h1 class="h2">Sändaren knappar och funktioner</h1>
+    <h2 class="h3">Knapplayout</h2>
+	<p>Alla sändare kan programmeras så att knappar och brytare får de funktioner du själv vill ha – det är till stor del en smaksak.
+	   Innan du bestämmer dig kan det dock vara bra att tänka igenom hur du flyger. Vänster spak är ofta lättare att släppa under flygning,
+	   vilket gör att knappar och brytare på vänster sida kan vara enklare att använda för funktioner som du använder ofta.</p>
+	<p>Vilken riktning en knapp ska ha – ”från dig” eller ”mot dig” – är också en smaksak.
+	   Ett vanligt och praktiskt sätt att tänka är att när alla knappar står bort från dig ska modellen alltid vara fullt kontrollerbar.
+	   Skulle något oväntat hända kan du då i panikläge slå alla knappar bort från dig och ändå ha kontroll.</p>
+	<p>En stark rekommendation är däremot att samma funktion på samma knapp för alla dina modeller.
+	   Då slipper du tänka efter i luften och minskar risken för misstag.</p>
+	<p>Nedan visas ett exempel på knapplayout på en Spektrum DX9, men de flesta sändare har liknande placering av knappar och brytare. Ta tänket med dig och använd det på andra märken.
+    <br><img src="radio_setup/knapp_layout_1.png" class="img-fluid" alt="Knapplayout">
+	</p>
+
+
+	
+	<hr>
+    <h2 class="h3">Nödvändiga funktioner</h2>
+    <h3 class="h4">Throttle cut - En säkerhet för alla</h3>
+	
+	<p>En funktion som många hoppar över är att lägga in throttle cut på modellen. Om detta inte görs innebär det en risk för både människor och utrustning.
+	   Elmodeller är tysta, och det kan räcka med att någon råkar komma åt gas-spaken för att motorn startar oväntat.
+	   Gör det därför till en vana att alltid använda throttle cut.</p>
+    <p>En bra throttle cut-lösning kontrollerar dessutom att gaspaken står på noll innan motorn kan aktiveras.
+	   Det innebär att motorreglaget måste vara i nolläge när du slår på ”motor på” – annars förblir motorn spärrad.</p>
+
+    <h3 class="h4">Throttle cut - Exempel - Spektrum NX & AirWave</h3>
+    <p>
+	  Det finns redan en färdig inställning för throttle cut. Se bilderna nedan.
+	  Här används knappen "H" som throttle cut, när knappen är från dig är "motorn på" och mot dig "motorn av".
+	  <br><br><i>Meny -> Throttle Cut
+	    <br>Kolla att fältet "01" efter "Switch H" har vit bakgrund på "0" och svart på "1". (Ändra bakgrund genom ändra knappen H till positionen som ska ändras och tryck sedan på hjulet för ändra)
+	  </i>
+      <br><img src="radio_setup/spektrum/th_cut_1.bmp" class="img-thumbnail me-1 ms-1" width="240" alt="Th cut bild 1">
+      <img src="radio_setup/spektrum/th_cut_2.bmp" class="img-thumbnail me-1 ms-1" width="240" alt="Th cut bild 2">
+    </p>
+	
+	<p>
+      <br>Vill du ha tal som berättar när motor on/off knappen ändras, lägg in följande.
+	  <br><br><i>Meny -> Audio Event -> Switch Changes -> Add New Sound Event.
+	   <br>Välj knapp "H" och sedan ljudet "Motorn On" och sedan "Motorn off"
+	  </i>
+      <br><img src="radio_setup/spektrum/th_cut_3.bmp" class="img-thumbnail me-1 ms-1 mt-1 mb-1" width="240" alt="Th cut bild 3">
+      <img src="radio_setup/spektrum/th_cut_4.bmp" class="img-thumbnail me-1 ms-1 mt-1 mb-1" width="240" alt="Th cut bild 4">
+      <img src="radio_setup/spektrum/th_cut_5.bmp" class="img-thumbnail me-1 ms-1 mt-1 mb-1" width="240" alt="Th cut bild 5">
+    </p>
+
+	
+  </main>
+
+  <footer class="bg-secondary text-white text-center py-3 mt-4">
+	  <div class="container">
+		<a href="../kontakt.html" class="text-white fw-bold text-decoration-none">Kontakt och policy</a>
+		<span class="mx-2">|</span>
+		<span>Vi ska ha kul tillsammans – En aktiv hobby i luften</span>
+	  </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 100% privacy-first analytics -->
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+</body>
+</html>
