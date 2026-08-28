@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Använd vår karta för att hitta till alla event på Modellflygets dag. Se var du kan titta på och prova på modellflyg nära dig!">
+  <title>Modellflygets dag - Besökskartan</title>
+  <link rel="canonical" href="https://aktivtmodellflyg.se/mfd/mfd_karta.html">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin="">
+   <style> #map { height: 400px; background: #eee; } </style>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+ 	
+</head>
+<body>
+
+  <!-- Meny -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
+    <div class="container">
+      <a class="navbar-brand p-0" href="../"><img src="../images/amf_90x90.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+		  
+          <li class="nav-item"><a class="nav-link" href="../mfd/mfd.html">
+		  Modellflygets dag
+		  </a></li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modellflyg
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" href="../mf/mf.html">Detta är modellflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/unga.html">Unga</a>
+            <a class="dropdown-item" href="../mf/avancera.html">Avancera</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/kalender.html">Kalender</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/foto_event.html">Foto Tema & event</a>
+            <a class="dropdown-item" href="../mf/foto_bygg.html">Foto Bygg & teknik</a>
+            <a class="dropdown-item" href="../mf/foto_modell.html">Foto Modeller</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Börja
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="../borja/borja.html">Hur man börjar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/skolflyg_karta.html">Prova-på & Skolflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/radio.html">Radio</a>
+            <a class="dropdown-item" href="../borja/modell_wing.html">Flygplan</a>
+            <a class="dropdown-item" href="../borja/laddare.html">Laddare</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/butiker.html">Butiker</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Utbildning
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="../utb/regler.html">Regler</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/prova.html">Spakstyrning</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
+            <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
+            <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/tips.html">Byggtips</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/utb_links.html">Länkar</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Uppdatera
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown4">
+            <a class="dropdown-item" href="../update/update.html">Intro</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../update/spektrum.html">Spektrum</a>
+            <a class="dropdown-item" href="../update/radiomaster.html">EdgeTX, ELRS & MM - RadioMaster</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  Ladda ned
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown5">
+            <a class="dropdown-item" href="../download/dl_mfd.html">För klubbar</a>
+            <a class="dropdown-item" href="../download/dl_pilot.html">För piloter</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../download/dl_links.html">Länkar</a>
+          </div>
+          </li>
+		  
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Innehåll -->
+  <main class="container py-4">
+    <h1 class="h2">Besökskartan - Klubbar som har aktivitet under Modellflygets dag</h1>
+
+    <p>
+	  Scrolla i listan och klicka på en klubb för att zooma dit <i>(listan är sorterad efter landskap)</i> eller zooma och dra i kartan.
+	  <br>Klicka på en klubb i kartan för mer information.
+	</p>
+<!--
+	<p class="amf">
+	  Vi deltar och vill synas på kartan. <a href="mfd_registrera.html">Registrera din klubb.</a> <b> Registreringen stänger 25 April</b>
+	</p>
+-->
+	<div class="container-fluid mt-3">
+		<div class="row">
+			<div class="col-md-4 order-2 order-md-1">
+				<div class="list-group" id="klubb-lista" style="max-height: 600px; overflow-y: auto;">
+					<div class="list-group-item">Lista över aktiva klubbar</div>
+				</div>
+			</div>
+
+			<div class="col-md-8 order-1 order-md-2 mb-3">
+				<div id="map" style="height: 600px; border-radius: 8px;"></div>
+			</div>
+		</div>
+	</div>
+	<p>
+      <a href="mfd.html">Tillbaka till 'Modellflygets dag'</a>
+	<p>
+
+    <hr>
+    <h2 class="h4">Uppskattar initiativet</h2>
+	<p>
+	  Dessa klubbar och intressenter stöttar Modellflygets dag – även om de inte arrangerar en egen aktivitet i år.
+	</p>
+<!--
+	<p class="amf">
+	  Vi vill visa att vi supportar. <a href="mfd_registrera.html">Gör en preliminär registrering.</a> <b> Registreringen stänger 25 April</b>
+	</p>
+-->
+	<div class="list-group" id="support-lista" style="max-height: 600px; overflow-y: auto;">
+  	  <div class="list-group-item">Supportar initiativet</div>
+	</div>
+  </main>
+
+  <footer class="bg-secondary text-white text-center py-3 mt-4">
+	  <div class="container">
+		<a href="../kontakt.html" class="text-white fw-bold text-decoration-none">Kontakt och policy</a>
+		<span class="mx-2">|</span>
+		<span>Vi ska ha kul tillsammans – En aktiv hobby i luften</span>
+	  </div>
+  </footer>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+	 
+	<script>
+		function escapeHtml(text) {
+			const div = document.createElement('div');
+			div.textContent = text || '';
+			return div.innerHTML;
+		}
+
+	    document.addEventListener("DOMContentLoaded", function () {
+			var map = L.map('map').setView([61.0, 15.0], 5);
+
+			const guestClubIcon = L.icon({
+			  iconUrl: 'images/marker_guest.svg',
+			  iconSize: [30, 42],
+			  iconAnchor: [15, 42],
+			  popupAnchor: [0, -38]
+			});
+			
+			/*
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; OpenStreetMap bidragsgivare'
+			}).addTo(map);
+		   */
+		   L.tileLayer('https://{s}://{z}/{x}/{y}{r}.png', {
+				attribution: '&copy; OpenStreetMap bidragsgivare &copy; CARTO'
+			}).addTo(map);
+		
+		    const supportListan = document.getElementById('support-lista');
+			
+			var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR49Lc3ZNULKPGSWtUjNV-0_7sLtNedDKltps6c8lND0Tmg9AKJYlRDjq-pLK_KR3AZFNyjqIO0eJ3z/pub?gid=499287765&single=true&output=csv';
+
+			Papa.parse(csvUrl, {
+				download: true,
+				header: true,
+				complete: function(results) {
+					var data = results.data;
+
+					data.forEach(function(row) {
+						if (row.Lat && row.Lng && row.Namn && !row.Namn.startsWith('!DEL') && !row.Landskap.startsWith('\\Exempel')) {
+							let Namn ="";
+							
+							if( row.Namn.startsWith('!Prel') ){
+							  Namn = row.Namn.slice(5).trim();
+							  
+							  const nyRad = document.createElement('div');
+							  nyRad.className = 'list-group-item';
+							  
+							  nyRad.innerHTML = `<small>${escapeHtml(row.Landskap)}</small> <b>${escapeHtml(Namn)}</b>`;
+							  
+							  supportListan.appendChild(nyRad);
+							}
+							else {
+							  // Skapa en klickbar rad i Bootstrap-listan
+							  var listItem = document.createElement('button');
+							  listItem.className = 'list-group-item list-group-item-action';
+
+							  // Skapa markör på kartan
+							  if( row.Namn.startsWith('!Gäst') ){
+							    Namn = row.Namn.slice(5).trim();
+							    var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)], {icon: guestClubIcon}).addTo(map);
+
+							    listItem.innerHTML = `<small>${escapeHtml(row.Landskap)}</small> <b>${escapeHtml(Namn)}</b>`;
+
+ 							    marker.bindPopup(`
+								  <i>Vi deltar som gästklubb på detta fält denna dag</i>
+								  <br><b>${escapeHtml(Namn)}</b>
+								  <br><b>Klockan:</b> ${escapeHtml(row.Tid)}
+								  <br><b>Hemsida:</b> <a href="${escapeHtml(row.Web)}" target="_blank" rel="noopener noreferrer">${escapeHtml(row.Web)}</a>
+							    `);
+
+							  }
+							  else{
+							    var marker = L.marker([parseFloat(row.Lat), parseFloat(row.Lng)]).addTo(map);
+								
+								listItem.innerHTML = `<small>${escapeHtml(row.Landskap)}</small> <b>${escapeHtml(row.Namn)}</b>`;
+
+ 							    marker.bindPopup(`
+								  <b>${escapeHtml(row.Namn)}</b>
+								  <br><b>Klockan:</b> ${escapeHtml(row.Tid)}
+								  <br><b>Hemsida:</b> <a href="${escapeHtml(row.Web)}" target="_blank" rel="noopener noreferrer">${escapeHtml(row.Web)}</a>
+							    `);
+							  }
+						  
+							  // När man klickar i listan: Zooma in på kartan och öppna popupen
+							  listItem.onclick = function() {
+								map.flyTo([row.Lat, row.Lng], 14);
+								marker.openPopup();
+							  };
+
+							  document.getElementById('klubb-lista').appendChild(listItem);
+							}
+							
+							
+						}
+					});
+
+				}
+			});
+
+
+		});
+	</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 100% privacy-first analytics -->
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+</body>
+</html>
