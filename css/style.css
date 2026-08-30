@@ -28,10 +28,11 @@ footer {
 }
 */
 
-/* Enbart på testsidan */
+/* Enbart på testsidan
 .navbar-brand{
 	background : #ff0000;
 }
+*/
 .test-only{
 	background-color: yellow;
 	color:black;

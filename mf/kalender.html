@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gemensam aktivitetskalendern för modellflyget.">
+  <title>Gemensam aktivitetskalender för modellflyget.</title>
+  <link rel="canonical" href="https://aktivtmodellflyg.se/mf/kalender.html">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Meny -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary p-0">
+    <div class="container">
+      <a class="navbar-brand p-0" href="../index.html"><img src="../images/amf_90x90.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+		  
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modellflyg
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" href="../mf/mf.html">Detta är modellflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mf/unga.html">Unga</a>
+            <a class="dropdown-item" href="../mf/avancera.html">Avancera</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../mfd/mfd.html">Modellflygets dag</a>
+            <a class="dropdown-item" href="../mf/kalender.html">Kalender</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Börja
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="../borja/borja.html">Hur man börjar</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/skolflyg_karta.html">Prova-på & Skolflyg</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/radio.html">Radio</a>
+            <a class="dropdown-item" href="../borja/modell_wing.html">Flygplan</a>
+            <a class="dropdown-item" href="../borja/laddare.html">Laddare</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../borja/butiker.html">Butiker</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Utbildning
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="../utb/regler.html">Regler</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../utb/basic_plane.html">Uppbyggnad RC-Plan</a>
+            <a class="dropdown-item" href="../utb/radio_setup.html">Sändarens knappar</a>
+            <a class="dropdown-item" href="../utb/tips.html">Byggtips</a>
+            <a class="dropdown-item" href="../utb/checklist.html">Checklista</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../update/spektrum.html">Uppdatera Spektrum</a>
+          </div>
+          </li>
+
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          EslövsMFK
+          </a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="../eslov/index.html">Flyga idag ?</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../eslov/medlem.html">Bli medlem & pilot</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../eslov/omrade.html">Skolflyg Flygområde</a>
+          </div>
+          </li>
+		  
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Innehåll -->
+  <main class="container py-4">
+  
+    <h1 class="h2">Aktivitetskalendrar</h1>
+ 
+    <div class="bg-white p-4 rounded shadow-sm border">
+        <!-- Filtersektion byggd i ren Bootstrap -->
+        <div class="card mb-4 bg-light">
+            <div class="card-body">
+                <!-- Landskapsfilter -->
+                <div class="mb-3">
+                    <span class="fw-bold d-block mb-2">Välj län:</span>
+                    <div id="landskap-filter-container" class="btn-group flex-wrap" role="group">
+                        <!-- Knapparna skapas här automatiskt -->
+                    </div>
+                </div>
+
+                <!-- Klubbfilter -->
+                <div>
+                    <span class="fw-bold d-block mb-2">Välj klubb:</span>
+                    <div id="klubb-filter-container" class="btn-group flex-wrap" role="group">
+                        <!-- Knapparna skapas här automatiskt -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kalenderlistan där händelserna visas -->
+        <h2 class="h5">Aktivt Modellflygs Eventkalender</h2>
+	    <p>
+	      Gemensamma aktiviteter där modellflygare från andra klubbar är välkomna att delta, samtidigt som nyfikna besökare kan komma och titta, ställa frågor och upptäcka vår hobby.
+	    </p>
+
+        <div id="intern-event-lista" class="row">
+            <!-- Händelsekorten ritas ut här -->
+        </div>
+
+        <hr>
+        <!-- Kalenderlistan där händelserna visas -->
+        <h2 class="h5">Länkar till andra kalendrar</h2>
+	    <p>
+	      Se vad som gäller för respektiva kalender och dess event.
+	    </p>
+        <div id="intern-cal-lista" class="row">
+            <!-- Händelsekorten ritas ut här -->
+        </div>
+
+    </div>
+	
+  </main>
+
+  <footer class="bg-secondary text-white text-center py-3 mt-4">
+	  <div class="container">
+		<a href="../kontakt.html" class="text-white fw-bold text-decoration-none">Kontakt och policy</a>
+		<span class="mx-2">|</span>
+		<span>Vi ska ha kul tillsammans – En aktiv hobby i luften</span>
+	  </div>
+  </footer>
+
+
+  <script>
+    // 1. DATA
+    const rawEvent = [
+        { event: "Modellflygets dag", datum: "2027-05-29", info: "Nationell temadag som firas av många klubbar.", link: "https://aktivtmodellflyg.se/mfd/mfd.html", landskap: "!Sverige", klubb: "" },
+	];
+   
+    const rawCal = [
+	  { namn: "Skånsktmodellflyg", link: "https://kalender.se/flygare", landskap: "Skåne" },
+	  { namn: "Stockholms Modellflygkalender", link: "http://bergenfeldt.com/website/calendar.html", landskap: "Stockholm" },
+	  { namn: "SMFF Tävlingskalender", link: "https://www.modellflygforbund.se/grenar/modellflyg/SMFF/tavlingar--rekord/tavlingskalender", landskap: "!Sverige" },
+	 // { namn: "RCFF Modellflygträffar", link: "https://rcff.se/events/index.php/karta/", landskap: "!Sverige" },
+	  { namn: "Allt Om Hobby", link: "https://www.alltomhobby.se/hobbykalendern/", landskap: "!Sverige" },
+	  { namn: "Modellsegelflyg", link: "http://www.modellsegelflyg.se/Calendar/ViewEvents.aspx", landskap: "!Sverige" },
+	  { namn: "F4 Skalaflygsällskapet", link: "https://skalaflyg.org/skalakalendern/", landskap: "!Sverige" }
+	];
+	
+    // Håller koll på vad användaren har klickat på
+    let valdaFilter = { landskap: 'alla', klubb: 'alla' };
+
+    // Starta när sidan är redo
+    document.addEventListener('DOMContentLoaded', function() {
+        byggLandskapsFilter();
+        uppdateraGränssnitt();
+    });
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text || '';
+      return div.innerHTML;
+    }
+
+    // 2. BYGG LANDSKAPSKNAPPARNA
+    function byggLandskapsFilter() {
+        const landskapSet = new Set();
+        rawEvent.forEach(item => { if (item.landskap) landskapSet.add(item.landskap.trim()); });
+        rawCal.forEach(item => { if (item.landskap) landskapSet.add(item.landskap.trim()); });
+        
+        const container = document.getElementById('landskap-filter-container');
+        container.innerHTML = '';
+
+        const allaBtn = document.createElement('button');
+        allaBtn.className = 'btn btn-outline-primary btn-sm active me-1 mb-1';
+        allaBtn.textContent = 'Alla län';
+        allaBtn.onclick = function() { hanteraLandskapsKlick(this, 'alla'); };
+        container.appendChild(allaBtn);
+
+        Array.from(landskapSet).sort().forEach(namn => {
+            const btn = document.createElement('button');
+            btn.className = 'btn btn-outline-primary btn-sm me-1 mb-1';
+            btn.textContent = namn;
+            btn.onclick = function() { hanteraLandskapsKlick(this, namn); };
+            container.appendChild(btn);
+        });
+    }
+
+    // 3. HANTERA KLICK PÅ LANDSKAP
+    function hanteraLandskapsKlick(knappElement, landskapVarde) {
+        valdaFilter.landskap = landskapVarde;
+        valdaFilter.klubb = 'alla'; // Nollställ alltid klubbvalet när man byter landskap
+
+        knappElement.parentElement.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+        knappElement.classList.add('active');
+
+        uppdateraGränssnitt();
+    }
+
+    // 4. UPPDATERA KLUBBKNAPPAR OCH EVENT-LISTA
+    function uppdateraGränssnitt() {
+        const unikaKlubbarILandskap = new Set();
+        
+        rawEvent.forEach(item => {
+            if (valdaFilter.landskap === 'alla' || item.landskap === valdaFilter.landskap) {
+                if (item.klubb) unikaKlubbarILandskap.add(item.klubb.trim());
+            }
+        });
+
+        const klubbContainer = document.getElementById('klubb-filter-container');
+        klubbContainer.innerHTML = '';
+
+        const allaKlubbarBtn = document.createElement('button');
+        allaKlubbarBtn.className = 'btn btn-outline-primary btn-sm me-1 mb-1';
+        if (valdaFilter.klubb === 'alla') allaKlubbarBtn.classList.add('active');
+        allaKlubbarBtn.textContent = valdaFilter.landskap === 'alla' ? 'Alla klubbar' : 'Alla klubbar i ' + valdaFilter.landskap;
+        allaKlubbarBtn.onclick = function() { hanteraKlickKlubb(this, 'alla'); }; 
+        klubbContainer.appendChild(allaKlubbarBtn);
+
+        Array.from(unikaKlubbarILandskap).sort().forEach(klubbNamn => {
+            const btn = document.createElement('button');
+            btn.className = 'btn btn-outline-primary btn-sm me-1 mb-1';
+            if (valdaFilter.klubb === klubbNamn) btn.classList.add('active');
+            btn.textContent = klubbNamn;
+            btn.onclick = function() { hanteraKlickKlubb(this, klubbNamn); };
+            klubbContainer.appendChild(btn);
+        });
+
+        visaFiltreradeEvent();
+    }
+
+    // 5. HANTERA KLICK PÅ KLUBB
+    function hanteraKlickKlubb(knappElement, klubbVarde) {
+        valdaFilter.klubb = klubbVarde;
+
+        knappElement.parentElement.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+        knappElement.classList.add('active');
+
+        visaFiltreradeEvent();
+    }
+
+    // 6. RITA UT HÄNDELSERNA PÅ SIDAN
+    function visaFiltreradeEvent() {
+        const listaEvent = document.getElementById('intern-event-lista');
+        const listaCal = document.getElementById('intern-cal-lista');
+        listaEvent.innerHTML = '';
+        listaCal.innerHTML = '';
+
+        const matchandeEvent = rawEvent.filter(item => {
+            const matcharLandskap = valdaFilter.landskap === 'alla' || item.landskap === valdaFilter.landskap;
+            const matcharKlubb = valdaFilter.klubb === 'alla' || item.klubb === valdaFilter.klubb;
+            return matcharLandskap && matcharKlubb;
+        });
+
+        if (matchandeEvent.length === 0) {
+            listaEvent.innerHTML = '<div class="col-12"><p class="text-muted italic py-3">Inga event för detta län är registrerat just nu.</p></div>';
+            //return;
+        }
+
+        matchandeEvent.forEach(item => {
+		    const mylink = escapeHtml(item.link?.trim()||'');
+            const kolumn = document.createElement('div');
+            kolumn.className = 'col-md-6 mb-3';
+            kolumn.innerHTML = `
+                <div class="card h-100 border-start border-primary border-3 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h4 class="h5 card-title mb-0 text-dark fw-bold">${escapeHtml(item.event)}</h4>
+                            <span class="badge bg-primary text-white">${escapeHtml(item.datum)}</span>
+                        </div>
+                        <p class="card-text text-secondary small mb-2">
+						  ${escapeHtml(item.info)}
+						  ${mylink ? `<br><a href="${mylink}" target="_blank" class="small">${mylink}</a> (Öppnas i ett nytt fönster)` : ''}
+						</p>
+                        <div class="border-top pt-2 mt-2" style="font-size: 0.8rem;">
+                            <span class="text-muted">Landskap:</span> <strong class="text-dark">${escapeHtml(item.landskap)}</strong>
+                            <span class="mx-2 text-muted">|</span>
+                            <span class="text-muted">Klubb:</span> <strong class="text-dark">${escapeHtml(item.klubb)}</strong>
+                        </div>
+                    </div>
+                </div>
+            `;
+            listaEvent.appendChild(kolumn);
+        });
+		
+        const matchandeCal = rawCal.filter(item => {
+            const matcharLandskap = valdaFilter.landskap === 'alla' || item.landskap === valdaFilter.landskap;
+            return matcharLandskap;
+        });
+
+        if (matchandeCal.length === 0) {
+            listaCal.innerHTML = '<div class="col-12"><p class="text-muted italic py-3">Inga kända kalendrar för detta län just nu.</p></div>';
+            //return;
+        }
+
+
+        matchandeCal.forEach(item => {
+            const kolumn = document.createElement('div');
+            kolumn.className = 'col-md-6 mb-3';
+            kolumn.innerHTML = `
+                <div class="card h-100 border-start border-info border-3 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h4 class="h5 card-title mb-0 text-dark fw-bold">${item.namn}</h4>
+							<span class="badge bg-info text-white">Kalender</span>
+                        </div>
+                        <p class="card-text text-secondary small mb-2">
+						  <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.link}</a> (Öppnas i ett nytt fönster)
+						</p>
+                        <div class="border-top pt-2 mt-2" style="font-size: 0.8rem;">
+                            <span class="text-muted">Landskap:</span> <strong class="text-dark">${item.landskap}</strong>
+                        </div>
+                    </div>
+                </div>
+            `;
+            listaCal.appendChild(kolumn);
+        });
+		
+    }
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
