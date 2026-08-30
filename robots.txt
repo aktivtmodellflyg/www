@@ -1,2 +1,6 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /test/
+Disallow: /download/dl/
+Disallow: /mfd/klubb/
+Sitemap: /sitemap.xml
