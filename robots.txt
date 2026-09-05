@@ -3,4 +3,4 @@ Allow: /
 Disallow: /www/test/
 Disallow: /www/download/dl/
 Disallow: /www/mfd/klubb/
-Sitemap: /www/sitemap.xml
+Sitemap: https://aktivtmodellflyg.github.io/www/sitemap.xml
